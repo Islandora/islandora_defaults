@@ -2,22 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_tags
     - node.type.islandora_object
-  enforced:
-    module:
-      - islandora_demo_feature
-id: node.islandora_object.field_tags
-field_name: field_tags
+id: node.islandora_object.uid
+field_name: uid
 entity_type: node
 bundle: islandora_object
-label: Tags
-description: ''
+label: 'Authored by'
+description: 'The username of the content author.'
 required: false
 translatable: false
 default_value: {  }
-default_value_callback: ''
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
 settings:
-  handler: 'default:taxonomy_term'
+  handler: default
   handler_settings: {  }
 field_type: entity_reference
