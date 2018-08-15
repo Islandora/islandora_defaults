@@ -1,22 +1,21 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - islandora_demo_feature
   module:
     - islandora
-name: media
-label: Media
+name: fedora_media
+label: 'Fedora Media'
 group: Islandora
-description: 'All repository media'
+description: 'Reactions for media whose source is in Fedora'
 requireAllConditions: false
 disabled: false
 conditions:
-  is_media:
-    id: is_media
+  media_uses_filesystem:
+    id: media_uses_filesystem
+    filesystems:
+      fedora: fedora
     negate: 0
-    uuid: d43b2007-33d2-4503-b4a7-e3597f1e94de
+    uuid: 7754b373-7734-42ac-ba38-21b8574b60d6
     context_mapping:
       media: '@islandora.media_route_context_provider:media'
 reactions:
@@ -30,5 +29,9 @@ reactions:
     id: delete
     actions:
       delete_media_from_triplestore: delete_media_from_triplestore
+    saved: false
+  islandora_map_uri_predicate:
+    id: islandora_map_uri_predicate
+    drupal_uri_predicate: 'schema:sameAs'
     saved: false
 weight: 0

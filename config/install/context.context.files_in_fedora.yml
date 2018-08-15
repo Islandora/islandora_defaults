@@ -1,22 +1,21 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - islandora_demo_feature
   module:
     - islandora
-name: files
-label: Files
+name: files_in_fedora
+label: 'Fedora Files'
 group: Islandora
-description: 'All repository files'
+description: 'Files in Fedora'
 requireAllConditions: false
 disabled: false
 conditions:
-  is_file:
-    id: is_file
+  file_uses_filesystem:
+    id: file_uses_filesystem
+    filesystems:
+      fedora: fedora
     negate: 0
-    uuid: 19b1b4e1-ea50-41f8-ab5b-8afb83eb5588
+    uuid: ea9d2661-2dc1-4480-bc9b-3fedeceba5f9
     context_mapping:
       file: '@islandora.file_route_context_provider:file'
 reactions:
