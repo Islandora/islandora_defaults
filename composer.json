@@ -1,0 +1,18 @@
+{
+  "name": "islandora/islandora_demo",
+  "description": "Islandora Demo",
+  "type": "drupal-module",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "keywords": ["Drupal", "Islandora"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/Islandora-CLAW/islandora_demo",
+  "support": {
+    "issues": "https://github.com/islandora-claw/CLAW/issues",
+    "irc": "irc://irc.freenode.net/islandora"
+  },
+  "require": {
+    "islandora/islandora_image": "dev-8.x-1.x",
+    "islandora/openseadragon" : "dev-8.x-1.x"
+  }
+}
