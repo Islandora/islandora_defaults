@@ -3,7 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - islandora_demo_feature
+      - islandora_demo
   module:
     - islandora_image
 id: generate_a_thumbnail_from_an_image_service_file

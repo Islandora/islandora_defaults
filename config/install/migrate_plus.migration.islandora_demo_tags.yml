@@ -3,7 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - islandora_demo_feature
+      - islandora_demo
 id: islandora_demo_tags
 class: null
 field_plugin_method: null
@@ -13,7 +13,7 @@ migration_group: islandora
 label: 'Tags migration for islandora_demo feature'
 source:
   plugin: csv
-  path: modules/contrib/islandora/modules/islandora_demo_feature/migrate/tags.csv
+  path: modules/contrib/islandora/modules/islandora_demo/migrate/tags.csv
   header_row_count: 1
   keys:
     - external_uri

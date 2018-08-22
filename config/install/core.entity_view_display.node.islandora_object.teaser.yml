@@ -9,7 +9,7 @@ dependencies:
     - node.type.islandora_object
   enforced:
     module:
-      - islandora_demo_feature
+      - islandora_demo
   module:
     - user
 id: node.islandora_object.teaser

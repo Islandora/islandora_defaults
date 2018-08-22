@@ -13,7 +13,7 @@ dependencies:
     - media.type.image
   enforced:
     module:
-      - islandora_demo_feature
+      - islandora_demo
   module:
     - openseadragon
 id: media.image.open_seadragon

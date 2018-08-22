@@ -1,4 +1,4 @@
-name: 'Islandora Demo Feature'
+name: 'Islandora Demo'
 description: 'A functional example that can be used to learn how content modeling works in CLAW.'
 type: module
 core: 8.x
