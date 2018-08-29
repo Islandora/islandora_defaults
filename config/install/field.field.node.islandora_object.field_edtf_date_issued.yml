@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edtf_date
+    - node.type.islandora_object
+  module:
+    - datetime
+id: node.islandora_object.field_edtf_date_issued
+field_name: field_edtf_date_issued
+entity_type: node
+bundle: islandora_object
+label: 'Date Issued'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

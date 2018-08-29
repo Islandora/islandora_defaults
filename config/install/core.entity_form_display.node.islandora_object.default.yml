@@ -3,7 +3,13 @@ status: true
 dependencies:
   config:
     - field.field.node.islandora_object.field_description
+    - field.field.node.islandora_object.field_edtf_date_created
+    - field.field.node.islandora_object.field_edtf_date_issued
+    - field.field.node.islandora_object.field_edtf_date
+    - field.field.node.islandora_object.field_extent
+    - field.field.node.islandora_object.field_identifier
     - field.field.node.islandora_object.field_member_of
+    - field.field.node.islandora_object.field_rights
     - field.field.node.islandora_object.field_tags
     - node.type.islandora_object
   enforced:
@@ -30,6 +36,46 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_edtf_date_created:
+    type: text_edtf
+    weight: 2
+    region: content
+    settings:
+      strict_dates: false
+      intervals: false
+    third_party_settings: {  }
+  field_edtf_date_issued:
+    type: text_edtf
+    weight: 2
+    region: content
+    settings:
+      strict_dates: false
+      intervals: false
+    third_party_settings: {  }
+  field_edtf_date:
+    type: text_edtf
+    weight: 1
+    region: content
+    settings:
+      strict_dates: false
+      intervals: false
+    third_party_settings: {  }
+  field_extent:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_identifier:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_member_of:
     weight: 2
     settings:
@@ -39,8 +85,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_rights:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
   field_tags:
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -101,10 +155,5 @@ content:
       size: 60
       placeholder: ''
     region: content
-    third_party_settings: {  }
-  url_redirects:
-    weight: 9
-    region: content
-    settings: {  }
     third_party_settings: {  }
 hidden: {  }
