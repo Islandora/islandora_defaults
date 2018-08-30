@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Islandora Demo stuff.
+ */
+
+/**
+ * Implements hook_rdf_namespaces().
+ */
+function islandora_demo_rdf_namespaces() {
+  return [
+    'relators' => 'http://id.loc.gov/vocabulary/relators/',
+  ];
+}

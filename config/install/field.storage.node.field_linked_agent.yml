@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   module:
+    - controlled_access_terms
     - node
-id: node.field_extent
-field_name: field_extent
+    - taxonomy
+id: node.field_linked_agent
+field_name: field_linked_agent
 entity_type: node
-type: string
+type: typed_relation
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+  target_type: taxonomy_term
+module: controlled_access_terms
 locked: false
 cardinality: -1
 translatable: true

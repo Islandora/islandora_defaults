@@ -3,12 +3,12 @@ status: true
 dependencies:
   module:
     - node
-id: node.field_extent
-field_name: field_extent
+id: node.field_edtf_date_issued
+field_name: field_edtf_date_issued
 entity_type: node
 type: string
 settings:
-  max_length: 255
+  max_length: 128
   is_ascii: false
   case_sensitive: false
 module: core
