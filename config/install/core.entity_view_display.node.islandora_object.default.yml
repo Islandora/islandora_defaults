@@ -16,8 +16,11 @@ dependencies:
     - field.field.node.islandora_object.field_subject
     - field.field.node.islandora_object.field_tags
     - node.type.islandora_object
+  enforced:
+    module:
+      - islandora_demo
   module:
-    - controlled_access_terms
+    - controlled_access_terms_default_configuration
     - user
 id: node.islandora_object.default
 targetEntityType: node
