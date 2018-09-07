@@ -63,6 +63,11 @@ fieldMappings:
   title:
     properties:
       - 'dc:title'
+  created:
+    properties:
+      - 'schema:dateCreated'
+    datatype_callback:
+      callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
   changed:
     properties:
       - 'schema:dateModified'
