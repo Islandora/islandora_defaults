@@ -13,6 +13,7 @@
   },
   "require": {
     "islandora/islandora_image": "dev-8.x-1.x",
-    "islandora/openseadragon" : "dev-8.x-1.x"
+    "islandora/openseadragon" : "dev-8.x-1.x",
+    "islandora/controlled_access_terms" : "dev-8.x-1.x"
   }
 }
