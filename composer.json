@@ -12,8 +12,11 @@
     "irc": "irc://irc.freenode.net/islandora"
   },
   "require": {
-    "islandora/islandora_image": "dev-8.x-1.x",
+    "islandora/islandora_image": "dev-issue-888",
     "islandora/openseadragon" : "dev-8.x-1.x",
-    "islandora/controlled_access_terms" : "dev-8.x-1.x"
+    "islandora/controlled_access_terms" : "dev-issue-888",
+    "drupal/field_group" : "^3.0",
+    "drupal/permissions_by_term" : "^1.51",
+    "drupal/field_permissions" : "^1.0"
   }
 }

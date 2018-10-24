@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.tags.field_external_uri
-    - taxonomy.vocabulary.tags
+    - field.field.taxonomy_term.islandora_display.field_external_uri
+    - taxonomy.vocabulary.islandora_display
   module:
     - link
     - path
     - text
-id: taxonomy_term.tags.default
+id: taxonomy_term.islandora_display.default
 targetEntityType: taxonomy_term
-bundle: tags
+bundle: islandora_display
 mode: default
 content:
   description:
@@ -31,7 +31,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
@@ -46,8 +46,11 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
 hidden: {  }

@@ -10,6 +10,8 @@ dependencies:
   - controlled_access_terms_default_configuration
   - eva
   - field
+  - field_group
+  - field_permissions
   - file
   - image
   - islandora

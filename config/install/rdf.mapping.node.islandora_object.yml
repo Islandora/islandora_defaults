@@ -43,7 +43,7 @@ fieldMappings:
       - 'dc:identifier'
   field_linked_agent:
     properties:
-      - 'relators:ctb' # Default value, (we expect it) will be overridden by an alter
+      - 'relators:ctb'
     mapping_type: rel
   field_member_of:
     properties:
@@ -76,8 +76,4 @@ fieldMappings:
   uid:
     properties:
       - 'schema:author'
-    mapping_type: rel
-  field_tags:
-    properties:
-      - 'schema:additionalType'
     mapping_type: rel

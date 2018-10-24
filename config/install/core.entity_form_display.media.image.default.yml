@@ -2,12 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_access_terms
     - field.field.media.image.field_file_size
     - field.field.media.image.field_height
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_of
+    - field.field.media.image.field_media_use
     - field.field.media.image.field_mime_type
-    - field.field.media.image.field_tags
     - field.field.media.image.field_width
     - image.style.thumbnail
     - media.type.image
@@ -21,10 +22,16 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_access_terms:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_media_image:
     settings:
       progress_indicator: throbber
@@ -35,28 +42,18 @@ content:
     region: content
   field_media_of:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete
-    weight: 3
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
+  field_media_use:
+    type: options_select
     weight: 2
     region: content
-    settings:
-      include_locked: true
+    settings: {  }
     third_party_settings: {  }
   name:
     type: string_textfield
@@ -68,7 +65,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -76,15 +73,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 8
     region: content
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 9
     region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -96,3 +95,4 @@ hidden:
   field_height: true
   field_mime_type: true
   field_width: true
+  langcode: true

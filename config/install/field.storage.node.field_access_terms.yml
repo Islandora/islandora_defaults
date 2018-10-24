@@ -1,17 +1,19 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - islandora_core_feature
   module:
+    - field_permissions
     - node
-id: node.field_member_of
-field_name: field_member_of
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: private
+id: node.field_access_terms
+field_name: field_access_terms
 entity_type: node
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: -1
