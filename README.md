@@ -1,5 +1,5 @@
 # Islandora Demo
-[![Build Status](https://travis-ci.org/Islandora-CLAW/islandora_demo.png?branch=8.x-1.x)](https://travis-ci.org/Islandora-CLAW/islandora_demo)
+[![Build Status](https://travis-ci.com/Islandora-CLAW/islandora_demo.png?branch=8.x-1.x)](https://travis-ci.com/Islandora-CLAW/islandora_demo)
 [![Contribution Guidelines](http://img.shields.io/badge/CONTRIBUTING-Guidelines-blue.svg)](./CONTRIBUTING.md)
 [![LICENSE](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](./LICENSE)
 
