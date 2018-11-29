@@ -17,6 +17,7 @@ dependencies:
   - islandora
   - islandora_core_feature
   - islandora_image
+  - islandora_video
   - language
   - link
   - media
