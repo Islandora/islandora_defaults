@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+name: image_original_file
+label: 'Image Original File'
+group: Islandora
+description: 'Original files for images'
+requireAllConditions: false
+disabled: false
+conditions:
+  media_has_term:
+    id: media_has_term
+    negate: 0
+    uuid: ae122314-81cd-42cb-b3b8-908754ba72e5
+    uri: 'http://pcdm.org/use#OriginalFile'
+    context_mapping:
+      media: '@islandora.media_route_context_provider:media'
+  parent_node_has_term:
+    id: parent_node_has_term
+    negate: 0
+    uuid: 2d2839ad-fc37-4c46-a8d2-e8409127c31d
+    uri: null
+    context_mapping:
+      media: '@islandora.media_route_context_provider:media'
+reactions:
+  derivative:
+    id: derivative
+    actions:
+      image_generate_a_service_file_from_an_original_file: image_generate_a_service_file_from_an_original_file
+    saved: false
+weight: 0
