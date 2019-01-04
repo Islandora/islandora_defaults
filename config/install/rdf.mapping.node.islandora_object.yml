@@ -41,10 +41,6 @@ fieldMappings:
   field_identifier:
     properties:
       - 'dc:identifier'
-  field_linked_agent:
-    properties:
-      - 'relators:ctb'
-    mapping_type: rel
   field_member_of:
     properties:
       - 'pcdm:memberOf'
@@ -52,7 +48,7 @@ fieldMappings:
   field_resource_type:
     properties:
       - 'dc:type'
-    mappin: rel
+    mapping_type: rel
   field_rights:
     properties:
       - 'dc:rights'
