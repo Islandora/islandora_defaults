@@ -34,6 +34,7 @@ third_party_settings:
         - field_member_of
         - field_access_terms
         - field_display_hints
+        - field_pid
       parent_name: ''
       weight: 2
       format_type: details
@@ -175,7 +176,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_pid:
-    weight: 26
+    weight: 12
     settings:
       size: 60
       placeholder: ''

@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.islandora_object.field_linked_agent
     - field.field.node.islandora_object.field_member_of
     - field.field.node.islandora_object.field_model
+    - field.field.node.islandora_object.field_pid
     - field.field.node.islandora_object.field_resource_type
     - field.field.node.islandora_object.field_rights
     - field.field.node.islandora_object.field_subject
@@ -173,5 +174,6 @@ hidden:
   field_access_terms: true
   field_display_hints: true
   field_model: true
+  field_pid: true
   openseadragon_media_evas_entity_view_2: true
   openseadragon_media_evas_service_file: true

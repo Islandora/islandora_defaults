@@ -5,5 +5,3 @@ id: fedoraadmin
 label: fedoraAdmin
 weight: 3
 is_admin: null
-permissions: {  }
-
