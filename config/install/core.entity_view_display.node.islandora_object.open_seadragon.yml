@@ -52,7 +52,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_edtf_date:
-    type: text_edtf_human
+    type: edtf_default
     weight: 7
     region: content
     label: above
@@ -64,7 +64,7 @@ content:
       season_hemisphere: north
     third_party_settings: {  }
   field_edtf_date_created:
-    type: text_edtf_human
+    type: edtf_default
     weight: 6
     region: content
     label: above
@@ -76,7 +76,7 @@ content:
       season_hemisphere: north
     third_party_settings: {  }
   field_edtf_date_issued:
-    type: text_edtf_human
+    type: edtf_default
     weight: 5
     region: content
     label: above

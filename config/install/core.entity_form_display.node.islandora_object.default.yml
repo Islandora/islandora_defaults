@@ -112,7 +112,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_edtf_date:
-    type: text_edtf
+    type: edtf_default
     weight: 9
     region: content
     settings:
@@ -120,7 +120,7 @@ content:
       intervals: false
     third_party_settings: {  }
   field_edtf_date_created:
-    type: text_edtf
+    type: edtf_default
     weight: 11
     region: content
     settings:
@@ -128,7 +128,7 @@ content:
       intervals: false
     third_party_settings: {  }
   field_edtf_date_issued:
-    type: text_edtf
+    type: edtf_default
     weight: 12
     region: content
     settings:
