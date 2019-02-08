@@ -15,7 +15,7 @@ conditions:
     id: node_has_term
     negate: 0
     uuid: f77caead-2e84-41e3-bcd5-11368f0342b2
-    uri: 'http://mozilla.github.io/pdf.js/'
+    uri: 'http://mozilla.github.io/pdf.js'
     context_mapping:
       node: '@node.node_route_context:node'
 reactions:
