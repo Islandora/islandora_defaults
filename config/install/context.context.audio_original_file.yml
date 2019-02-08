@@ -1,0 +1,28 @@
+uuid: dadf88db-8c7a-4d17-af18-f85339bf8f39
+langcode: en
+status: true
+dependencies:
+  module:
+    - islandora
+name: audio_original_file
+label: 'Audio Original File'
+group: Islandora
+description: 'Reactions for audio original files'
+requireAllConditions: false
+disabled: false
+conditions:
+  media_has_term:
+    id: media_has_term
+    negate: 0
+    uuid: 6a56b625-4b86-46dc-8997-b3bc2443d48b
+    uri: 'http://pcdm.org/use#OriginalFile'
+    context_mapping:
+      media: '@islandora.media_route_context_provider:media'
+reactions:
+  derivative:
+    id: derivative
+    actions:
+      audio_generate_a_service_file_from_an_original_file: audio_generate_a_service_file_from_an_original_file
+    saved: false
+weight: 0
+
