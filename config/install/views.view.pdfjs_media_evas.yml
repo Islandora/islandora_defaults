@@ -253,8 +253,7 @@ display:
         groups:
           1: AND
       entity_type: node
-      bundles:
-        - islandora_object
+      bundles: {  }
       argument_mode: id
       default_argument: null
       title: 'PDFjs - Original File'
@@ -345,8 +344,7 @@ display:
         groups:
           1: AND
       entity_type: node
-      bundles:
-        - islandora_object
+      bundles: {  }
       argument_mode: id
       default_argument: null
       title: 'PDFjs - Preservation Master'
@@ -436,8 +434,7 @@ display:
         groups:
           1: AND
       entity_type: node
-      bundles:
-        - islandora_object
+      bundles: {  }
       title: 'PDFjs - Service File'
     cache_metadata:
       max-age: -1

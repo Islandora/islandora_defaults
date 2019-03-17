@@ -253,8 +253,7 @@ display:
         groups:
           1: AND
       entity_type: node
-      bundles:
-        - islandora_object
+      bundles: {  }
       argument_mode: id
       default_argument: null
       title: 'OpenSeadragon - Original File'
@@ -345,8 +344,7 @@ display:
         groups:
           1: AND
       entity_type: node
-      bundles:
-        - islandora_object
+      bundles: {  }
       argument_mode: id
       default_argument: null
       title: 'OpenSeadragon - Preservation Master'
@@ -436,8 +434,7 @@ display:
         groups:
           1: AND
       entity_type: node
-      bundles:
-        - islandora_object
+      bundles: {  }
       title: 'OpenSeadragon - Service File'
     cache_metadata:
       max-age: -1
