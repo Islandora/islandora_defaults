@@ -1,4 +1,3 @@
-uuid: da1393b1-041e-48b9-b6ed-f8efc4eac1da
 langcode: en
 status: true
 dependencies:
@@ -24,4 +23,3 @@ reactions:
     mode: node.pdfjs
     saved: false
 weight: 0
-

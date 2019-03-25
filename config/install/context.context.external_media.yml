@@ -30,17 +30,11 @@ reactions:
   index:
     id: index
     actions:
-      index_media_in_triplestore: index_media_in_triplestore
       index_node_in_fedora: index_node_in_fedora
     saved: false
   delete:
     id: delete
     actions:
-      delete_media_from_triplestore: delete_media_from_triplestore
       delete_node_from_fedora: delete_node_from_fedora
-    saved: false
-  islandora_map_uri_predicate:
-    id: islandora_map_uri_predicate
-    drupal_uri_predicate: 'schema:sameAs'
     saved: false
 weight: 0

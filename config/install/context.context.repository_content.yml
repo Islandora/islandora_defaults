@@ -39,4 +39,8 @@ reactions:
     id: islandora_map_uri_predicate
     drupal_uri_predicate: 'schema:sameAs'
     saved: false
+  alter_jsonld_type:
+    id: alter_jsonld_type
+    source_field: field_model
+    saved: false
 weight: 0

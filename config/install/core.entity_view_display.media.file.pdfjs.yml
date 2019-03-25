@@ -1,4 +1,3 @@
-uuid: 3245d86c-dedf-4d67-ad77-bf11f1e16a22
 langcode: en
 status: true
 dependencies:
@@ -13,8 +12,6 @@ dependencies:
     - media.type.file
   module:
     - pdf
-_core:
-  default_config_hash: 4IvggE8oYmWHSc5cJSI4Wr8_0gspviIvNbfty4vvN5s
 id: media.file.pdfjs
 targetEntityType: media
 bundle: file
@@ -88,4 +85,3 @@ hidden:
   langcode: true
   thumbnail: true
   uid: true
-

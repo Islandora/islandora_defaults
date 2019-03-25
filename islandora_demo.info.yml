@@ -15,10 +15,10 @@ dependencies:
   - file
   - image
   - islandora
+  - islandora_audio
   - islandora_core_feature
   - islandora_image
   - islandora_video
-  - islandora_audio
   - language
   - link
   - media
@@ -27,6 +27,7 @@ dependencies:
   - node
   - openseadragon
   - path
+  - pdf
   - rdf
   - system
   - taxonomy
