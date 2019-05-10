@@ -1,0 +1,95 @@
+# Tamil translation of Islandora 8
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2019-04-18 12:27-0500\n"
+"PO-Revision-Date: 2019-04-18 12:27-0500\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Title"
+msgstr "தலைப்பு"
+
+msgid "Language"
+msgstr "மொழி"
+
+msgid "Subject"
+msgstr "துறை"
+
+msgid "Terms that define who has access to view/edit this resource."
+msgstr ""
+"ஒரு வளத்தை யார் "
+"பார்க்க/திருத்த முடியும் "
+"என்பதைக் "
+"கட்டுப்படுத்தும் "
+"குறிசொற்கள்."
+
+msgid "Access Control"
+msgstr "அணுக்கக் கட்டுப்பாடு"
+
+msgid "Alternative Title"
+msgstr "மாற்றுத் தலைப்பு"
+
+msgid "Description"
+msgstr "விபரிப்பு"
+
+msgid "Display hints"
+msgstr ""
+"காட்சிப்படுத்தல் "
+"தெரிவுகள்"
+
+msgid "Terms that will change how this resource is displayed."
+msgstr ""
+"ஒரு வளம் எப்படிக் "
+"காட்சிப்படுத்தப்படும் "
+"என்பதை மாற்றும் "
+"குறிசொற்கள்."
+
+msgid "Date"
+msgstr "திகதி"
+
+msgid "Date Created"
+msgstr "ஆக்கத் திகதி"
+
+msgid "Date Issued"
+msgstr "வெளியீட்டுத் திகதி"
+
+msgid "Extent"
+msgstr "அளவு"
+
+msgid "Identifier"
+msgstr "அடையாளம்காட்டி"
+
+msgid "Linked Agent"
+msgstr "தொடர்புடைய முகவர்"
+
+msgid "Member of"
+msgstr "இல் உறுப்பினர் "
+
+msgid "Model"
+msgstr "ஒப்புரு"
+
+msgid ""
+"This is the \"type\" of resource, this does affect how it is "
+"displayed/viewed."
+msgstr ""
+"ஒரு வளத்தின் வகை அல்லது "
+"மாதிரி.  இது அந்த வளம் "
+"எப்படி "
+"காட்சிப்படுத்தப்படுகிறது "
+"என்பதைப் பாதிக்காது."
+
+msgid "PID"
+msgstr "நிலைத்த அடையாளம் காட்டி"
+
+msgid "Resource Type"
+msgstr "வள வகை"
+
+msgid "Rights"
+msgstr "உரிமைகள்"
+
