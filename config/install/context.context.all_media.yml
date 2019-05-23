@@ -28,7 +28,7 @@ reactions:
     saved: false
   islandora_map_uri_predicate:
     id: islandora_map_uri_predicate
-    drupal_uri_predicate: 'schema:sameAs'
+    drupal_uri_predicate: 'iana:describedby'
     saved: false
   index:
     id: index
