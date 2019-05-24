@@ -6,7 +6,7 @@ dependencies:
     - node.type.islandora_object
   enforced:
     module:
-      - islandora_demo
+      - islandora_defaults
 id: node.islandora_object.field_member_of
 field_name: field_member_of
 entity_type: node

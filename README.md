@@ -1,11 +1,11 @@
-# Islandora Demo
-[![Build Status](https://travis-ci.com/Islandora-CLAW/islandora_demo.png?branch=8.x-1.x)](https://travis-ci.com/Islandora-CLAW/islandora_demo)
+# Islandora Defaults
+[![Build Status](https://travis-ci.com/Islandora-CLAW/islandora_defaults.png?branch=8.x-1.x)](https://travis-ci.com/Islandora-CLAW/islandora_defaults)
 [![Contribution Guidelines](http://img.shields.io/badge/CONTRIBUTING-Guidelines-blue.svg)](./CONTRIBUTING.md)
 [![LICENSE](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](./LICENSE)
 
 ## Introduction
 
-Islandora Demo is a Drupal feature intended to showcase all of the functionality of a full Islandora install.
+Islandora Defaults is a Drupal feature intended to showcase all of the functionality of a full Islandora install.
 
 ## Maintainers
 

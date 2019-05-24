@@ -23,18 +23,18 @@ install:
   - cd $DRUPAL_DIR;
   - COMPOSER_MEMORY_LIMIT=-1 php -d memory_limit=-1 $COMPOSER_PATH config repositories.local path "$TRAVIS_BUILD_DIR"
   - COMPOSER_MEMORY_LIMIT=-1 php -d memory_limit=-1 $COMPOSER_PATH require "drupal/search_api_solr:^2.7"
-  - COMPOSER_MEMORY_LIMIT=-1 php -d memory_limit=-1 $COMPOSER_PATH require "islandora/islandora_demo:dev-travis-testing as dev-8.x-1.x" --prefer-source --update-with-dependencies
+  - COMPOSER_MEMORY_LIMIT=-1 php -d memory_limit=-1 $COMPOSER_PATH require "islandora/islandora_defaults:dev-travis-testing as dev-8.x-1.x" --prefer-source --update-with-dependencies
   - cd web;
   - (drush -y --uri=127.0.0.1:8282 en islandora_core_feature; drush -y --uri=127.0.0.1:8282 fim islandora_core_feature)
-  - (drush -y --uri=127.0.0.1:8282 en islandora_demo; drush -y --uri=127.0.0.1:8282 entity:updates; drush -y --uri=127.0.0.1:8282 pmu islandora_demo; drush -y --uri=127.0.0.1:8282 en islandora_demo)
-  - drush -y --uri=127.0.0.1:8282 fim islandora_demo
+  - (drush -y --uri=127.0.0.1:8282 en islandora_defaults; drush -y --uri=127.0.0.1:8282 entity:updates; drush -y --uri=127.0.0.1:8282 pmu islandora_defaults; drush -y --uri=127.0.0.1:8282 en islandora_defaults)
+  - drush -y --uri=127.0.0.1:8282 fim islandora_defaults
   - drush -y --uri=127.0.0.1:8282 en islandora_search
 
 script:
   - $SCRIPT_DIR/line_endings.sh $TRAVIS_BUILD_DIR
   - phpcs --standard=Drupal --ignore=*.md --extensions=php,module,inc,install,test,profile,theme,css,info $TRAVIS_BUILD_DIR
   - phpcpd --names *.module,*.inc,*.test,*.php $TRAVIS_BUILD_DIR
-#  - php core/scripts/run-tests.sh --suppress-deprecations --url http://127.0.0.1:8282 --verbose --php `which php` --module "islandora_demo"
+#  - php core/scripts/run-tests.sh --suppress-deprecations --url http://127.0.0.1:8282 --verbose --php `which php` --module "islandora_defaults"
 
 notifications:
   irc:

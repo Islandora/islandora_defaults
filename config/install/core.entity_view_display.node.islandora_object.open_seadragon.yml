@@ -22,7 +22,7 @@ dependencies:
     - node.type.islandora_object
   enforced:
     module:
-      - islandora_demo
+      - islandora_defaults
   module:
     - controlled_access_terms
     - user

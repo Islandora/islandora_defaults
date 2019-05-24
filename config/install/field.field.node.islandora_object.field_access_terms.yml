@@ -7,7 +7,7 @@ dependencies:
     - taxonomy.vocabulary.islandora_access
   enforced:
     module:
-      - islandora_demo
+      - islandora_defaults
 id: node.islandora_object.field_access_terms
 field_name: field_access_terms
 entity_type: node

@@ -11,7 +11,7 @@ dependencies:
     - media.type.file
   enforced:
     module:
-      - islandora_demo
+      - islandora_defaults
   module:
     - openseadragon
 id: media.file.open_seadragon

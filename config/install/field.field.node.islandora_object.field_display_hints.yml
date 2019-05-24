@@ -7,7 +7,7 @@ dependencies:
     - taxonomy.vocabulary.islandora_display
   enforced:
     module:
-      - islandora_demo
+      - islandora_defaults
 id: node.islandora_object.field_display_hints
 field_name: field_display_hints
 entity_type: node

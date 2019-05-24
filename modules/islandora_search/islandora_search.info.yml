@@ -6,4 +6,4 @@ package: 'Islandora'
 dependencies:
   - block
   - search_api_solr_defaults
-  - islandora_demo
+  - islandora_defaults

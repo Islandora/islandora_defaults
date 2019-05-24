@@ -7,7 +7,7 @@ dependencies:
     - taxonomy.vocabulary.islandora_models
   enforced:
     module:
-      - islandora_demo
+      - islandora_defaults
 id: node.islandora_object.field_model
 field_name: field_model
 entity_type: node
