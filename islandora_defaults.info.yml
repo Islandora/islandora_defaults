@@ -7,7 +7,7 @@ dependencies:
   - content_translation
   - context
   - controlled_access_terms
-  - controlled_access_terms_default_configuration
+  - controlled_access_terms_defaults
   - eva
   - field
   - field_group
