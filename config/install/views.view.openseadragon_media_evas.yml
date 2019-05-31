@@ -2,13 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.open_seadragon
+    - field.storage.media.field_media_file
+    - field.storage.media.field_media_image
   enforced:
     module:
       - islandora_defaults
   module:
     - eva
     - media
+    - openseadragon
     - taxonomy
     - user
 id: openseadragon_media_evas
@@ -63,49 +65,65 @@ display:
           default_row_class: true
           uses_fields: false
       row:
-        type: 'entity:media'
+        type: fields
         options:
-          relationship: none
-          view_mode: open_seadragon
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: true
       fields:
-        name:
-          id: name
-          table: media_field_data
-          field: name
-          entity_type: media
-          entity_field: media
-          label: ''
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
+        field_media_image:
+          id: field_media_image
+          table: media__field_media_image
+          field: field_media_image
           relationship: none
           group_type: group
           admin_label: ''
+          label: ''
           exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          group_column: value
+          click_sort_column: target_id
+          type: openseadragon_image
+          settings: {  }
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -115,6 +133,69 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
+        field_media_file:
+          id: field_media_file
+          table: media__field_media_file
+          field: field_media_file
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: openseadragon_image
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -185,7 +266,10 @@ display:
         - 'languages:language_interface'
         - url
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.media.field_media_file'
+        - 'config:field.storage.media.field_media_image'
+        - extensions
   entity_view_1:
     display_plugin: entity_view
     id: entity_view_1
@@ -265,10 +349,12 @@ display:
           default_row_class: true
           uses_fields: false
       row:
-        type: 'entity:media'
+        type: fields
         options:
-          relationship: none
-          view_mode: open_seadragon
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -276,7 +362,10 @@ display:
         - 'languages:language_interface'
         - url
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.media.field_media_file'
+        - 'config:field.storage.media.field_media_image'
+        - extensions
   entity_view_2:
     display_plugin: entity_view
     id: entity_view_2
@@ -356,10 +445,12 @@ display:
           default_row_class: true
           uses_fields: false
       row:
-        type: 'entity:media'
+        type: fields
         options:
-          relationship: none
-          view_mode: open_seadragon
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -367,7 +458,10 @@ display:
         - 'languages:language_interface'
         - url
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.media.field_media_file'
+        - 'config:field.storage.media.field_media_image'
+        - extensions
   service_file:
     display_plugin: entity_view
     id: service_file
@@ -443,4 +537,7 @@ display:
         - 'languages:language_interface'
         - url
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.media.field_media_file'
+        - 'config:field.storage.media.field_media_image'
+        - extensions
