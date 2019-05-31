@@ -12,9 +12,9 @@
     "irc": "irc://irc.freenode.net/islandora"
   },
   "require": {
-    "islandora/islandora": "dev-release",
-    "islandora/openseadragon" : "dev-release",
-    "islandora/controlled_access_terms" : "dev-release",
+    "islandora/islandora": "1.0.0",
+    "islandora/openseadragon" : "1.0.0",
+    "islandora/controlled_access_terms" : "1.0.0",
     "drupal/field_group" : "^3.0",
     "drupal/permissions_by_term" : "^1.51",
     "drupal/field_permissions" : "^1.0"
