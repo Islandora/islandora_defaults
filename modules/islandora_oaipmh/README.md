@@ -24,5 +24,5 @@ of the linked agent field. Including agent links in the OAI-PMH metadata
 currently requires updating the RDF mapping to include a Dublin Core predicate
 for that field or any other additional fields. 
 The rest\_oai\_pmh module also supports defining mappings using the
-[metatag\ module](https://www.drupal.org/project/metatag) or creating a custom
+[metatag module](https://www.drupal.org/project/metatag) or creating a custom
 metadata profile using the Twig templating system.
