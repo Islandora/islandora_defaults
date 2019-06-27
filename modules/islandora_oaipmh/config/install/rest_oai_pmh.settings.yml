@@ -1,6 +1,5 @@
 rest_oai_pmh:
   entity_type: node
-_core:
 view_displays:
   'oai_pmh:all_repository_items': 'oai_pmh:all_repository_items'
 support_sets: 1
