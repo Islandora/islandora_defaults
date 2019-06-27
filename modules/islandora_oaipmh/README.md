@@ -22,7 +22,7 @@ the [repository item content model's RDF mapping](http://islandora-claw.github.i
 However, the RDF mapping does not include support for islandora\_default's use
 of the linked agent field. Including agent links in the OAI-PMH metadata
 currently requires updating the RDF mapping to include a Dublin Core predicate
-for that field or any other additional fields. 
-The rest\_oai\_pmh module also supports defining mappings using the
-[metatag\ module](https://www.drupal.org/project/metatag) or creating a custom
+for that field or any other additional fields. Alternatively, the rest\_oai\_pmh module 
+also supports defining mappings with the
+[metatag module](https://www.drupal.org/project/metatag) or creating a custom
 metadata profile using the Twig templating system.
