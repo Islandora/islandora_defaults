@@ -6,9 +6,9 @@ dependencies:
     - media.type.audio
     - taxonomy.vocabulary.islandora_media_use
   content:
-    - 'taxonomy_term:islandora_media_use:550e8f91-2214-4f3d-88c6-6552f44b2b81'
+    - 'taxonomy_term:islandora_media_use:fe4c8b44-b230-45df-a7b5-62794f9b3b01'
 _core:
-  default_config_hash: ZSdgdnlaHn9SQJzAd4ZgJqQ8uCUA3wf4OQNRxaPL4d0
+  default_config_hash: _Z9k59ERH4xZEDu82qUWLlMMptINa_nX1vR8K1gKpPU
 id: media.audio.field_media_use
 field_name: field_media_use
 entity_type: media
@@ -19,7 +19,7 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 550e8f91-2214-4f3d-88c6-6552f44b2b81
+    target_uuid: fe4c8b44-b230-45df-a7b5-62794f9b3b01
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
