@@ -56,6 +56,9 @@ fieldMappings:
     properties:
       - 'dc:subject'
     mapping_type: rel
+  field_language:
+    properties:
+      - 'dcterms:language'
   title:
     properties:
       - 'dc:title'
@@ -73,3 +76,4 @@ fieldMappings:
     properties:
       - 'schema:author'
     mapping_type: rel
+
