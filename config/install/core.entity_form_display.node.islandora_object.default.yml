@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.islandora_object.field_edtf_date_created
     - field.field.node.islandora_object.field_edtf_date_issued
     - field.field.node.islandora_object.field_extent
+    - field.field.node.islandora_object.field_genre
     - field.field.node.islandora_object.field_identifier
     - field.field.node.islandora_object.field_language
     - field.field.node.islandora_object.field_linked_agent
@@ -274,4 +275,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_genre: true

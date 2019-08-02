@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.islandora_object.field_edtf_date_created
     - field.field.node.islandora_object.field_edtf_date_issued
     - field.field.node.islandora_object.field_extent
+    - field.field.node.islandora_object.field_genre
     - field.field.node.islandora_object.field_identifier
     - field.field.node.islandora_object.field_language
     - field.field.node.islandora_object.field_linked_agent
@@ -175,6 +176,7 @@ hidden:
   display_media_thumbnail: true
   field_access_terms: true
   field_display_hints: true
+  field_genre: true
   field_model: true
   field_pid: true
   langcode: true
