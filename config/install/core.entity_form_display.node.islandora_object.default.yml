@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.islandora_object.field_edtf_date_created
     - field.field.node.islandora_object.field_edtf_date_issued
     - field.field.node.islandora_object.field_extent
+    - field.field.node.islandora_object.field_form
     - field.field.node.islandora_object.field_genre
     - field.field.node.islandora_object.field_identifier
     - field.field.node.islandora_object.field_language
@@ -53,12 +54,14 @@ third_party_settings:
         - title
         - field_alternative_title
         - field_identifier
+        - field_linked_agent
         - field_resource_type
-        - field_description
+        - field_genre
         - field_language
+        - field_description
+        - field_form
         - field_extent
         - field_rights
-        - field_linked_agent
         - field_edtf_date
         - field_subject
         - field_edtf_date_created
@@ -100,7 +103,7 @@ content:
     third_party_settings: {  }
   field_description:
     type: string_textarea
-    weight: 4
+    weight: 7
     region: content
     settings:
       rows: 5
@@ -114,7 +117,7 @@ content:
     third_party_settings: {  }
   field_edtf_date:
     type: edtf_default
-    weight: 9
+    weight: 11
     region: content
     settings:
       strict_dates: false
@@ -123,7 +126,7 @@ content:
     third_party_settings: {  }
   field_edtf_date_created:
     type: edtf_default
-    weight: 11
+    weight: 13
     region: content
     settings:
       strict_dates: false
@@ -132,7 +135,7 @@ content:
     third_party_settings: {  }
   field_edtf_date_issued:
     type: edtf_default
-    weight: 12
+    weight: 14
     region: content
     settings:
       strict_dates: false
@@ -141,9 +144,27 @@ content:
     third_party_settings: {  }
   field_extent:
     type: string_textfield
-    weight: 6
+    weight: 9
     region: content
     settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_form:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_genre:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
@@ -157,7 +178,7 @@ content:
     third_party_settings: {  }
   field_language:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -165,7 +186,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_linked_agent:
-    weight: 8
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: '60'
@@ -197,21 +218,21 @@ content:
     type: string_textfield
     region: content
   field_resource_type:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_rights:
     type: string_textfield
-    weight: 7
+    weight: 10
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   field_subject:
-    weight: 10
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -275,5 +296,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  field_genre: true
+hidden: {  }

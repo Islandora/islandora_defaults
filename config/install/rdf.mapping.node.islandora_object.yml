@@ -62,6 +62,9 @@ fieldMappings:
   field_genre:
     properties:
       - 'dcterms:type'
+  field_form:
+    properties:
+      - 'dcterms:format'
   title:
     properties:
       - 'dc:title'
