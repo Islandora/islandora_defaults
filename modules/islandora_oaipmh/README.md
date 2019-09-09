@@ -6,7 +6,7 @@ to provide an OAI-PMH endpoint to allow harvesting repository content.
 By default the OAI-PMH endpoint is located at 'yoursite.example/oai/request'
 and includes a set identified as 'oai\_pmh:all\_repository\_items' which can be
 further configured by editing the provided OAI-PMH view. The provided set 
-includes all items using the 'repository item' content model that _don't_ use 
+includes all items using the 'repository item' content type that _don't_ use 
 the 'Collection' model. Additional sets can be created by making views with the
 Entity Reference view display mode and enabling them on the rest\_oai\_pmh
 configuration page: `/admin/config/services/rest/oai-pmh`. The module can use
@@ -26,3 +26,12 @@ for that field or any other additional fields. Alternatively, the rest\_oai\_pmh
 also supports defining mappings with the
 [metatag module](https://www.drupal.org/project/metatag) or creating a custom
 metadata profile using the Twig templating system.
+
+## Configuration
+
+1. Install rest\_oai\_pmh (e.g. `composer require drupal/rest\_oai\_pmh`).
+1. Enable this module (e.g. `drush en -y islandora\_oaipmh`).
+1. Trigger the OAI-PMH indexer: Click the button found on the page at `http://localhost:8000/admin/config/services/rest/oai-pmh/queue` (or wait for cron)
+1. Give anonymous users the "Access GET on OAI-PMH resource" permission.
+
+Your OAI-PMH Endpoint should now be ready. e.g. `http://localhost:8000/oai/request?verb=ListRecords&metadataPrefix=oai\_dc`
