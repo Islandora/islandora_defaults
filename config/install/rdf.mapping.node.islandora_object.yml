@@ -13,6 +13,7 @@ targetEntityType: node
 bundle: islandora_object
 types:
   - 'pcdm:Object'
+  - 'schema:CreativeWork'
 fieldMappings:
   field_alternative_title:
     properties:
