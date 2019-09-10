@@ -34,4 +34,5 @@ dependencies:
   - text
   - user
   - views
+  - weight
 package: Islandora
