@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.node.field_weight
     - node.type.islandora_object
+  module:
+    - weight
 id: node.islandora_object.field_weight
 field_name: field_weight
 entity_type: node
@@ -12,11 +14,10 @@ label: Weight
 description: 'Indicates the order of a resource in a collection of resources.'
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: '0'
 default_value_callback: ''
 settings:
-  min: 1
-  max: null
-  prefix: ''
-  suffix: ''
-field_type: integer
+  range: '1000'
+field_type: weight
