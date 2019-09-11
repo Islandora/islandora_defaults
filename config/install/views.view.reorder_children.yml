@@ -5,16 +5,13 @@ dependencies:
     module:
       - islandora_core_feature
   module:
-    - jsonld
     - node
-    - rest
-    - serialization
     - user
     - weight
-id: reorder_members
-label: 'Reorder members'
+id: reorder_children
+label: 'Reorder children'
 module: views
-description: 'Manage members belonging to a piece of content'
+description: 'Re-order children belonging to a piece of content'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -188,7 +185,7 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: 'Re-order members'
+      title: 'Re-order children'
       header: {  }
       footer: {  }
       empty: {  }
@@ -253,10 +250,10 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: node/%node/reorder_members
+      path: node/%node/reorder_children
       menu:
         type: tab
-        title: 'Re-order Members'
+        title: 'Re-order Children'
         description: ''
         expanded: false
         parent: ''
