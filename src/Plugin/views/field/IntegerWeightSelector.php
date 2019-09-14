@@ -40,17 +40,13 @@ class IntegerWeightSelector extends FieldPluginBase {
       '#tree' => TRUE,
     ];
 
-    // THIS IS WHERE WE NEED THE FIELD CONFIG TO BUILD OUR RANGE.
-    // Perhaps we can pull min/max from the existing values...
+    // Use the existing values of this result set to populate the options.
     $options = [];
-    $min = 1;
-    // An absurdly high max for proof-of-concept.
-    $max = 1000;
-    for ($i = $min; $i <= $max; $i++) {
-      $options[$i] = $i;
+    foreach ($this->view->result as $row_index => $row) {
+      $options[$this->getValue($row)] = $this->getValue($row);
     }
 
-    // At this point the query already run, so we can access the results.
+    // Now that we have all the available weight values, populate the forms.
     foreach ($this->view->result as $row_index => $row) {
       $entity = $row->_entity;
       $field_langcode = $entity->getEntityTypeId() . '__' . $this->field . '_langcode';
