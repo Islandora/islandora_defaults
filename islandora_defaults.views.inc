@@ -11,7 +11,6 @@
 function islandora_defaults_views_data_alter(&$data) {
   // For now only support Nodes.
   $fields = \Drupal::service('entity_field.manager')->getFieldStorageDefinitions('node');
-  \Drupal::logger('test')->notice(print_r($data['node__field_weight']['field_weight_value'], TRUE));
   foreach ($fields as $field => $field_storage_definition) {
     if ($field_storage_definition->getType() == 'integer' && strpos($field, "field_") === 0) {
       $data['node__' . $field][$field . '_value']['field'] = $data['node__' . $field][$field]['field'];
