@@ -11,8 +11,8 @@ use Drupal\views\Render\ViewsRenderPipelineMarkup;
  * Field handler to present a weight selector element.
  *
  * A port of the weight module's weight selector element
- * to support an unsigned integer using the min and max
- * integer settings.
+ * to support an unsigned integer using the values found
+ * in the result set.
  *
  * @ingroup views_field_handlers
  *
