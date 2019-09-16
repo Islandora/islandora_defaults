@@ -58,7 +58,7 @@ fieldMappings:
     mapping_type: rel
   field_weight:
     properties:
-      - 'schema:position'
+      - 'co:index'
   title:
     properties:
       - 'dc:title'
