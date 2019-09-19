@@ -13,14 +13,12 @@ conditions:
   media_has_term:
     id: media_has_term
     negate: 0
-    uuid: a263091f-a591-4aff-b890-64bd88c3b01e
     uri: 'http://pcdm.org/use#OriginalFile'
     context_mapping:
       media: '@islandora.media_route_context_provider:media'
   parent_node_has_term:
     id: parent_node_has_term
     negate: 0
-    uuid: 5654bf7d-f82b-48ca-a738-f36720b4e252
     uri: 'https://schema.org/DigitalDocument'
     context_mapping:
       media: '@islandora.media_route_context_provider:media'

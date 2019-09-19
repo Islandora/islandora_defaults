@@ -15,7 +15,6 @@ conditions:
     filesystems:
       public: public
     negate: 0
-    uuid: 399d6acd-013e-4cb1-8c45-ece5c18060d5
     context_mapping:
       file: '@islandora.file_route_context_provider:file'
 reactions:

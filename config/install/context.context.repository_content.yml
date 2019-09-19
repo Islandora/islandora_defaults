@@ -19,7 +19,6 @@ conditions:
     bundles:
       islandora_object: islandora_object
     negate: 0
-    uuid: 640d52cd-7cd5-4d9e-837d-c93b2deb814e
     context_mapping:
       node: '@node.node_route_context:node'
 reactions:

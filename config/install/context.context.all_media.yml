@@ -18,7 +18,6 @@ conditions:
       image: image
       video: video
     negate: 0
-    uuid: ae973920-edc3-40c4-a1d6-f2039ede8648
     context_mapping:
       media: '@islandora.media_route_context_provider:media'
 reactions:
