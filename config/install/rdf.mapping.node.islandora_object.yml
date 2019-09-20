@@ -56,6 +56,9 @@ fieldMappings:
     properties:
       - 'dc:subject'
     mapping_type: rel
+  field_weight:
+    properties:
+      - 'co:index'
   title:
     properties:
       - 'dc:title'
