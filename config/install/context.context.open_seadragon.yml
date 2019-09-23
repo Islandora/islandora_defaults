@@ -13,7 +13,6 @@ conditions:
   node_has_term:
     id: node_has_term
     negate: 0
-    uuid: dba449c3-4b9a-4428-8320-e6bd8f69eee2
     tids:
       -
         target_id: '35'
