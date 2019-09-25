@@ -12,7 +12,7 @@
     "irc": "irc://irc.freenode.net/islandora"
   },
   "require": {
-    "islandora/islandora": "dev-8.x-1.x",
+    "islandora/islandora": "dev-paged-content-config",
     "islandora/openseadragon" : "dev-8.x-1.x",
     "islandora/controlled_access_terms" : "dev-8.x-1.x",
     "drupal/field_group" : "^3.0",
