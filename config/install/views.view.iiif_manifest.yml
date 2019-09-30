@@ -6,7 +6,7 @@ dependencies:
     - field.storage.media.field_media_image
     - taxonomy.vocabulary.islandora_media_use
   content:
-    - 'taxonomy_term:islandora_media_use:7b3a5856-a633-497e-8706-e0383a6e3cea'
+    - 'taxonomy_term:islandora_media_use:1caedfef-2b85-4a49-a092-2fa22d5a938e'
   module:
     - file
     - image
@@ -20,7 +20,7 @@ dependencies:
 id: iiif_manifest
 label: 'IIIF Manifest'
 module: views
-description: ''
+description: 'Generates IIIF manifests for paged content'
 tag: ''
 base_table: media_field_data
 base_field: mid
@@ -233,7 +233,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            - 16
+            - 18
           group: 1
           exposed: false
           expose:
