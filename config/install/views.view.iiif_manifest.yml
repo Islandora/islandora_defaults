@@ -4,9 +4,6 @@ dependencies:
   config:
     - field.storage.media.field_media_file
     - field.storage.media.field_media_image
-    - taxonomy.vocabulary.islandora_media_use
-  content:
-    - 'taxonomy_term:islandora_media_use:1caedfef-2b85-4a49-a092-2fa22d5a938e'
   module:
     - file
     - image
@@ -224,16 +221,15 @@ display:
           expose:
             operator: ''
           group: 1
-        field_media_use_target_id:
-          id: field_media_use_target_id
-          table: media__field_media_use
-          field: field_media_use_target_id
-          relationship: none
+        field_external_uri_uri:
+          id: field_external_uri_uri
+          table: taxonomy_term__field_external_uri
+          field: field_external_uri_uri
+          relationship: field_media_use
           group_type: group
           admin_label: ''
-          operator: or
-          value:
-            - 18
+          operator: '='
+          value: 'http://pcdm.org/use#ServiceFile'
           group: 1
           exposed: false
           expose:
@@ -248,7 +244,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            reduce: false
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -261,13 +257,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: islandora_media_use
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
+          plugin_id: string
       sorts:
         field_weight_value:
           id: field_weight_value
@@ -293,6 +283,15 @@ display:
           group_type: group
           admin_label: 'field_media_of: Content'
           required: true
+          plugin_id: standard
+        field_media_use:
+          id: field_media_use
+          table: media__field_media_use
+          field: field_media_use
+          relationship: none
+          group_type: group
+          admin_label: 'field_media_use: Taxonomy term'
+          required: false
           plugin_id: standard
       arguments:
         field_member_of_target_id:
@@ -334,6 +333,10 @@ display:
           not: false
           plugin_id: numeric
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -342,7 +345,6 @@ display:
         - request_format
         - url
         - url.query_args
-        - user
         - user.permissions
       tags:
         - 'config:field.storage.media.field_media_file'
@@ -379,7 +381,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - user.permissions
       tags:
         - 'config:field.storage.media.field_media_file'
