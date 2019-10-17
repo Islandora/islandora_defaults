@@ -1,6 +1,6 @@
 # ![Islandora Defaults mascot](https://user-images.githubusercontent.com/2371345/67035035-31828c80-f0ef-11e9-8c46-db902caaaa81.png) 
 # Islandora Defaults    
-[![Build Status](https://travis-ci.com/Islandora-CLAW/islandora_defaults.png?branch=8.x-1.x)](https://travis-ci.com/Islandora-CLAW/islandora_defaults)
+[![Build Status](https://travis-ci.com//Islandora/islandora_defaults.png?branch=8.x-1.x)](https://travis-ci.com//Islandora/islandora_defaults)
 [![Contribution Guidelines](http://img.shields.io/badge/CONTRIBUTING-Guidelines-blue.svg)](./CONTRIBUTING.md)
 [![LICENSE](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](./LICENSE)
 
@@ -28,7 +28,8 @@ Further documentation for this module is available on the [Islandora 8 documenta
 
 Having problems or solved a problem? Check out the Islandora google groups for a solution.
 
-* [Islandora Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora) * [Islandora Dev Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora-dev)
+* [Islandora Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora) 
+* [Islandora Dev Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora-dev)
 
 ## Development
 If you would like to contribute, please get involved by attending our weekly [Tech Call](https://github.com/Islandora/documentation/wiki). We love to hear from you!
