@@ -29,6 +29,7 @@ install:
   - cd $DRUPAL_DIR;
   - COMPOSER_MEMORY_LIMIT=-1 php -d memory_limit=-1 $COMPOSER_PATH config repositories.local path "$TRAVIS_BUILD_DIR"
   - COMPOSER_MEMORY_LIMIT=-1 php -d memory_limit=-1 $COMPOSER_PATH require "drupal/search_api_solr:^2.7"
+  - $COMPOSER_PATH clearcache
   - COMPOSER_MEMORY_LIMIT=-1 php -d memory_limit=-1 $COMPOSER_PATH require "islandora/islandora_defaults:dev-travis-testing as dev-8.x-1.x" --prefer-source --update-with-dependencies
   - cd web;
   - ls modules/contrib/islandora/modules/islandora_core_feature/config/install/;
