@@ -12,12 +12,10 @@ matrix:
 services:
   - mysql
 
-matrix:
-    fast_finish: true
-
 branches:
   only:
     - /^8.x/
+    - /master/
 
 before_install:
   - export SCRIPT_DIR=$HOME/islandora/.scripts
