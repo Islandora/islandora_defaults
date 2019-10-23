@@ -39,6 +39,9 @@ fieldMappings:
     properties:
       - 'pcdm:fileOf'
     mapping_type: rel
+  field_original_name:
+    properties:
+      - 'premis3:originalName'
   field_tags:
     properties:
       - 'schema:additionalType'

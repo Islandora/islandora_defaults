@@ -9,6 +9,7 @@ dependencies:
     - field.field.media.image.field_media_of
     - field.field.media.image.field_media_use
     - field.field.media.image.field_mime_type
+    - field.field.media.image.field_original_name
     - field.field.media.image.field_width
     - image.style.thumbnail
     - media.type.image
@@ -55,6 +56,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_original_name:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   name:
     type: string_textfield
     weight: 0
