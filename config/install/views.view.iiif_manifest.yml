@@ -349,7 +349,6 @@ display:
       tags:
         - 'config:field.storage.media.field_media_file'
         - 'config:field.storage.media.field_media_image'
-        - extensions
   rest_export_1:
     display_plugin: rest_export
     id: rest_export_1
@@ -385,4 +384,3 @@ display:
       tags:
         - 'config:field.storage.media.field_media_file'
         - 'config:field.storage.media.field_media_image'
-        - extensions
