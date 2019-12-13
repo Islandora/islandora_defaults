@@ -35,6 +35,7 @@ dependencies:
     - field.field.node.islandora_object.field_subjects_name
     - field.field.node.islandora_object.field_table_of_contents
     - field.field.node.islandora_object.field_temporal_subject
+    - field.field.node.islandora_object.field_weight
     - node.type.islandora_object
   enforced:
     module:
@@ -54,6 +55,7 @@ third_party_settings:
         - field_access_terms
         - field_display_hints
         - field_pid
+        - field_weight
       parent_name: ''
       weight: 1
       format_type: details
@@ -382,6 +384,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_weight:
+    weight: 26
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   langcode:
     type: language_select

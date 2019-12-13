@@ -18,7 +18,7 @@ A in-depth description of the changes made by this PR. Technical details and
 * Does this change require documentation to be updated? 
 * Does this change add any new dependencies? 
 * Does this change require any other modifications to be made to the repository
- (ie. Regeneration activity, etc.)? 
+ (i.e. Regeneration activity, etc.)? 
 * Could this change impact execution of existing code?
 
 # How should this be tested?
@@ -34,4 +34,4 @@ Any additional information that you think would be helpful when reviewing this
  PR.
 
 # Interested parties
-Tag (@ mention) interested parties or, if unsure, @Islandora-CLAW/committers
+Tag (@ mention) interested parties or, if unsure, @Islandora/8-x-committers

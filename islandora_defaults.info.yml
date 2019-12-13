@@ -1,5 +1,5 @@
 name: 'Islandora Defaults'
-description: 'A functional example that can be used to learn how content modeling works in CLAW.'
+description: 'Default configuration for Islandora 8.'
 type: module
 core: 8.x
 dependencies:
@@ -17,7 +17,9 @@ dependencies:
   - islandora
   - islandora_audio
   - islandora_core_feature
+  - islandora_iiif
   - islandora_image
+  - islandora_text_extraction_defaults
   - islandora_video
   - language
   - link
@@ -29,6 +31,8 @@ dependencies:
   - path
   - pdf
   - rdf
+  - rest
+  - serialization
   - system
   - taxonomy
   - text

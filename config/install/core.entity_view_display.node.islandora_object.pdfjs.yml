@@ -36,6 +36,7 @@ dependencies:
     - field.field.node.islandora_object.field_subjects_name
     - field.field.node.islandora_object.field_table_of_contents
     - field.field.node.islandora_object.field_temporal_subject
+    - field.field.node.islandora_object.field_weight
     - node.type.islandora_object
   enforced:
     module:
@@ -311,6 +312,7 @@ hidden:
   field_model: true
   field_pid: true
   langcode: true
+  field_weight: true
   openseadragon_media_evas_entity_view_1: true
   openseadragon_media_evas_entity_view_2: true
   openseadragon_media_evas_service_file: true

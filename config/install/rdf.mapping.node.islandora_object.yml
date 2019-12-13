@@ -104,6 +104,9 @@ fieldMappings:
   field_note:
     properties:
       - 'skos:note'
+  field_weight:
+    properties:
+      - 'co:index'
   title:
     properties:
       - 'dc:title'

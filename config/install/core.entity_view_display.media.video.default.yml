@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.video.field_media_use
     - field.field.media.video.field_media_video_file
     - field.field.media.video.field_mime_type
+    - field.field.media.video.field_original_name
     - media.type.video
   module:
     - file
@@ -33,6 +34,11 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
+  field_gemini_uri:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_media_of:
     type: entity_reference_label
     weight: 4
@@ -71,6 +77,13 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_original_name:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   name:
     type: string
     weight: 0

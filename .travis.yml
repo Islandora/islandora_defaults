@@ -1,24 +1,29 @@
 sudo: true
-dist: trusty
 language: php
 php:
-  - 7.1
   - 7.2
+  - 7.3
 
 matrix:
     fast_finish: true
+    allow_failures:
+      - php: 7.3
+
+services:
+  - mysql
 
 branches:
   only:
     - /^8.x/
+    - /master/
 
 before_install:
-  - export SCRIPT_DIR=$HOME/CLAW/.scripts
+  - export SCRIPT_DIR=$HOME/islandora/.scripts
   - export DRUPAL_DIR=/opt/drupal
   - export COMPOSER_PATH="/home/travis/.phpenv/versions/$TRAVIS_PHP_VERSION/bin/composer"
 
 install:
-  - git clone https://github.com/Islandora-CLAW/CLAW.git $HOME/CLAW
+  - git clone https://github.com/Islandora/documentation.git $HOME/islandora
   - $SCRIPT_DIR/travis_setup_drupal.sh
   - git -C "$TRAVIS_BUILD_DIR" checkout -b travis-testing
   - cd $DRUPAL_DIR;
@@ -36,11 +41,3 @@ script:
   - phpcs --standard=Drupal --ignore=*.md --extensions=php,module,inc,install,test,profile,theme,css,info $TRAVIS_BUILD_DIR
   - phpcpd --names *.module,*.inc,*.test,*.php $TRAVIS_BUILD_DIR
 #  - php core/scripts/run-tests.sh --suppress-deprecations --url http://127.0.0.1:8282 --verbose --php `which php` --module "islandora_defaults"
-
-notifications:
-  irc:
-    channels:
-      - "irc.freenode.org#islandora"
-    on_success: change
-    on_failure: always
-    skip_join: true
