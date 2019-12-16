@@ -1,3 +1,4 @@
+uuid: 3caffa63-b69b-4772-8141-c40ab394942e
 langcode: en
 status: true
 dependencies:
@@ -5,7 +6,9 @@ dependencies:
     - core.entity_view_mode.node.binary
     - field.field.node.islandora_object.field_access_terms
     - field.field.node.islandora_object.field_alternative_title
+    - field.field.node.islandora_object.field_classification
     - field.field.node.islandora_object.field_coordinates
+    - field.field.node.islandora_object.field_coordinates_text
     - field.field.node.islandora_object.field_description
     - field.field.node.islandora_object.field_dewey_classification
     - field.field.node.islandora_object.field_display_hints
@@ -68,12 +71,28 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_classification:
+    type: string
+    weight: 28
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_coordinates:
     type: geolocation_latlng
     weight: 22
     region: content
     label: above
     settings: {  }
+    third_party_settings: {  }
+  field_coordinates_text:
+    type: string
+    weight: 23
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_description:
     type: basic_string
@@ -84,7 +103,7 @@ content:
     third_party_settings: {  }
   field_dewey_classification:
     type: string
-    weight: 25
+    weight: 26
     region: content
     label: above
     settings:
@@ -148,7 +167,7 @@ content:
       link: true
     third_party_settings: {  }
   field_gemini_uri:
-    weight: 30
+    weight: 33
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -168,11 +187,6 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-  field_gemini_uri:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_identifier:
     type: string
     weight: 1
@@ -183,7 +197,7 @@ content:
     third_party_settings: {  }
   field_isbn:
     type: string
-    weight: 28
+    weight: 30
     region: content
     label: above
     settings:
@@ -199,7 +213,7 @@ content:
     third_party_settings: {  }
   field_lcc_classification:
     type: string
-    weight: 26
+    weight: 27
     region: content
     label: above
     settings:
@@ -215,7 +229,7 @@ content:
     third_party_settings: {  }
   field_local_identifier:
     type: string
-    weight: 27
+    weight: 29
     region: content
     label: above
     settings:
@@ -231,14 +245,14 @@ content:
     region: content
   field_note:
     type: basic_string
-    weight: 31
+    weight: 32
     region: content
     label: above
     settings: {  }
     third_party_settings: {  }
   field_oclc_number:
     type: string
-    weight: 29
+    weight: 31
     region: content
     label: above
     settings:
@@ -286,7 +300,7 @@ content:
     third_party_settings: {  }
   field_subjects_name:
     type: entity_reference_label
-    weight: 24
+    weight: 25
     region: content
     label: above
     settings:
@@ -301,7 +315,7 @@ content:
     third_party_settings: {  }
   field_temporal_subject:
     type: entity_reference_label
-    weight: 23
+    weight: 24
     region: content
     label: above
     settings:
@@ -320,9 +334,9 @@ hidden:
   field_display_hints: true
   field_model: true
   field_pid: true
+  field_weight: true
   langcode: true
   openseadragon_media_evas_entity_view_1: true
-  field_weight: true
   openseadragon_media_evas_entity_view_2: true
   openseadragon_media_evas_service_file: true
   pdfjs_media_evas_entity_view_1: true
