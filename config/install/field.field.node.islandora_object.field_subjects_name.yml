@@ -27,6 +27,6 @@ settings:
     sort:
       field: name
       direction: asc
-    auto_create: false
+    auto_create: true
     auto_create_bundle: corporate_body
 field_type: entity_reference
