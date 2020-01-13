@@ -30,7 +30,6 @@ dependencies:
     - field.field.node.islandora_object.field_oclc_number
     - field.field.node.islandora_object.field_pid
     - field.field.node.islandora_object.field_place_published
-    - field.field.node.islandora_object.field_place_published_country
     - field.field.node.islandora_object.field_resource_type
     - field.field.node.islandora_object.field_rights
     - field.field.node.islandora_object.field_subject
@@ -81,7 +80,6 @@ third_party_settings:
         - field_edtf_date
         - field_edition
         - field_place_published
-        - field_place_published_country
         - field_language
         - field_description
         - field_table_of_contents
@@ -346,15 +344,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
-  field_place_published_country:
-    weight: 11
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_resource_type:
     weight: 3

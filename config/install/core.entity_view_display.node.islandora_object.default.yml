@@ -30,7 +30,6 @@ dependencies:
     - field.field.node.islandora_object.field_oclc_number
     - field.field.node.islandora_object.field_pid
     - field.field.node.islandora_object.field_place_published
-    - field.field.node.islandora_object.field_place_published_country
     - field.field.node.islandora_object.field_resource_type
     - field.field.node.islandora_object.field_rights
     - field.field.node.islandora_object.field_subject
@@ -258,14 +257,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
-  field_place_published_country:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_resource_type:
     weight: 13

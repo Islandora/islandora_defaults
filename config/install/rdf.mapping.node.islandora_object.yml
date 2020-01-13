@@ -71,9 +71,6 @@ fieldMappings:
   field_place_published:
     properties:
       - 'relators:pup'
-  field_place_published_country:
-    properties:
-      - 'relators:pup'
   field_table_of_contents:
     properties:
       - 'dcterms:tableOfContents'
