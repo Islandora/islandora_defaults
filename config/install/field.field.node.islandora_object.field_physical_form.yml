@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_physical_form
     - node.type.islandora_object
-    - taxonomy.vocabulary.form
+    - taxonomy.vocabulary.physical_form
 id: node.islandora_object.field_physical_form
 field_name: field_physical_form
 entity_type: node
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      form: form
+      physical_form: physical_form
     sort:
       field: name
       direction: asc
