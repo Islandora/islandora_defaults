@@ -15,7 +15,7 @@ dependencies:
     - field.field.node.islandora_object.field_edtf_date_created
     - field.field.node.islandora_object.field_edtf_date_issued
     - field.field.node.islandora_object.field_extent
-    - field.field.node.islandora_object.field_form
+    - field.field.node.islandora_object.field_physical_form
     - field.field.node.islandora_object.field_genre
     - field.field.node.islandora_object.field_geographic_subject
     - field.field.node.islandora_object.field_identifier
@@ -150,7 +150,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_form:
+  field_physical_form:
     type: entity_reference_label
     weight: 17
     region: content

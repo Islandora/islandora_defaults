@@ -15,7 +15,7 @@ dependencies:
     - field.field.node.islandora_object.field_edtf_date_created
     - field.field.node.islandora_object.field_edtf_date_issued
     - field.field.node.islandora_object.field_extent
-    - field.field.node.islandora_object.field_form
+    - field.field.node.islandora_object.field_physical_form
     - field.field.node.islandora_object.field_genre
     - field.field.node.islandora_object.field_geographic_subject
     - field.field.node.islandora_object.field_identifier
@@ -83,7 +83,7 @@ third_party_settings:
         - field_language
         - field_description
         - field_table_of_contents
-        - field_form
+        - field_physical_form
         - field_extent
         - field_rights
         - field_subject
@@ -221,7 +221,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_form:
+  field_physical_form:
     type: entity_reference_autocomplete
     weight: 15
     region: content

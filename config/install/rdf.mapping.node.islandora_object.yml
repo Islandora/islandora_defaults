@@ -62,7 +62,7 @@ fieldMappings:
   field_genre:
     properties:
       - 'dcterms:type'
-  field_form:
+  field_physical_form:
     properties:
       - 'dcterms:format'
   field_edition:
