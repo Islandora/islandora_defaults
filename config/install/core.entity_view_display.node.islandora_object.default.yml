@@ -240,7 +240,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
     region: content
   field_oclc_number:
     weight: 31
@@ -295,7 +295,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
     region: content
   field_temporal_subject:
     weight: 24

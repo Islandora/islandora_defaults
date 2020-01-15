@@ -233,7 +233,7 @@ content:
       link: true
     third_party_settings: {  }
   field_note:
-    type: basic_string
+    type: text_default
     weight: 33
     region: content
     label: above
@@ -288,7 +288,7 @@ content:
       link: true
     third_party_settings: {  }
   field_table_of_contents:
-    type: basic_string
+    type: text_default
     weight: 16
     region: content
     label: above

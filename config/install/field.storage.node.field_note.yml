@@ -10,7 +10,7 @@ third_party_settings:
 id: node.field_note
 field_name: field_note
 entity_type: node
-type: string_long
+type: text_long
 settings:
   case_sensitive: false
 module: core
