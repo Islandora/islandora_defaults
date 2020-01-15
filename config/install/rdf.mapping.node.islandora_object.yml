@@ -56,6 +56,51 @@ fieldMappings:
     properties:
       - 'dc:subject'
     mapping_type: rel
+  field_language:
+    properties:
+      - 'dcterms:language'
+  field_genre:
+    properties:
+      - 'dcterms:type'
+  field_physical_form:
+    properties:
+      - 'dcterms:format'
+  field_edition:
+    properties:
+      - 'rdau:P60329'
+  field_place_published:
+    properties:
+      - 'relators:pup'
+  field_table_of_contents:
+    properties:
+      - 'dcterms:tableOfContents'
+  field_dewey_classification:
+    properties:
+      - 'dc:subject'
+  field_lcc_classification:
+    properties:
+      - 'dc:subject'
+  field_subjects_name:
+    properties:
+      - 'dc:subject'
+  field_temporal_subject:
+    properties:
+      - 'dcterms:temporal'
+  field_geographic_subject:
+    properties:
+      - 'dcterms:spatial'
+  field_isbn:
+    properties:
+      - 'dbpedia:isbn'
+  field_oclc_number:
+    properties:
+      - 'dbpedia:oclc'
+  field_local_identifier:
+    properties:
+      - 'dcterms:identifier'
+  field_note:
+    properties:
+      - 'skos:note'
   field_weight:
     properties:
       - 'co:index'
