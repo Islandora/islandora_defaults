@@ -25,7 +25,7 @@ currently requires updating the RDF mapping to include a Dublin Core predicate
 for that field or any other additional fields. Alternatively, the rest\_oai\_pmh module 
 also supports defining mappings with the
 [metatag module](https://www.drupal.org/project/metatag) or creating a custom
-metadata profile using the Twig templating system.
+OaiMetadataMap plugin.
 
 ## Configuration
 
