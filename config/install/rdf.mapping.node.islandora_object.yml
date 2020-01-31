@@ -16,45 +16,45 @@ types:
 fieldMappings:
   field_alternative_title:
     properties:
-      - 'dc:alternative'
+      - 'dcterms:alternative'
   field_edtf_date:
     properties:
-      - 'dc:date'
+      - 'dcterms:date'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_edtf_date_created:
     properties:
-      - 'dc:created'
+      - 'dcterms:created'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_edtf_date_issued:
     properties:
-      - 'dc:issued'
+      - 'dcterms:issued'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_description:
     properties:
-      - 'dc:description'
+      - 'dcterms:description'
   field_extent:
     properties:
-      - 'dc:extent'
+      - 'dcterms:extent'
   field_identifier:
     properties:
-      - 'dc:identifier'
+      - 'dcterms:identifier'
   field_member_of:
     properties:
       - 'pcdm:memberOf'
     mapping_type: rel
   field_resource_type:
     properties:
-      - 'dc:type'
+      - 'dcterms:type'
     mapping_type: rel
   field_rights:
     properties:
-      - 'dc:rights'
+      - 'dcterms:rights'
   field_subject:
     properties:
-      - 'dc:subject'
+      - 'dcterms:subject'
     mapping_type: rel
   field_language:
     properties:
@@ -76,13 +76,13 @@ fieldMappings:
       - 'dcterms:tableOfContents'
   field_dewey_classification:
     properties:
-      - 'dc:subject'
+      - 'dcterms:subject'
   field_lcc_classification:
     properties:
-      - 'dc:subject'
+      - 'dcterms:subject'
   field_subjects_name:
     properties:
-      - 'dc:subject'
+      - 'dcterms:subject'
   field_temporal_subject:
     properties:
       - 'dcterms:temporal'
@@ -106,7 +106,7 @@ fieldMappings:
       - 'co:index'
   title:
     properties:
-      - 'dc:title'
+      - 'dcterms:title'
   created:
     properties:
       - 'schema:dateCreated'

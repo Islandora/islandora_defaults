@@ -16,7 +16,7 @@ types:
 fieldMappings:
   name:
     properties:
-      - 'dc:title'
+      - 'dcterms:title'
       - 'rdf:label'
   created:
     properties:
