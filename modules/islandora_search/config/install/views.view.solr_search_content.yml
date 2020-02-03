@@ -12,7 +12,6 @@ description: 'A search page preconfigured to search through the content of your 
 tag: ''
 base_table: search_api_index_default_solr_index
 base_field: search_api_id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -67,8 +66,20 @@ display:
           view_modes:
             'entity:node':
               article: search_result
-              islandora_object: teaser
+              islandora_object: search_result
               page: search_result
+            'entity:taxonomy_term':
+              corporate_body: default
+              family: default
+              genre: default
+              geo_location: default
+              language: default
+              person: default
+              physical_form: default
+              resource_types: default
+              subject: default
+              tags: default
+              temporal: default
       filters:
         type:
           id: type
@@ -95,6 +106,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -136,6 +149,8 @@ display:
               administrator: '0'
               fedoraadmin: '0'
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

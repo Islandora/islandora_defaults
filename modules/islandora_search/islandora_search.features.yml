@@ -1,1 +1,4 @@
 bundle: islandora
+required:
+  - search_api.index.default_solr_index
+  - search_api.server.default_solr_server
