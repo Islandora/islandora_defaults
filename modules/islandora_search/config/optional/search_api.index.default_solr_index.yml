@@ -8,15 +8,10 @@ dependencies:
     - taxonomy
     - search_api
   config:
-    - field.storage.taxonomy_term.field_person_alternate_names
-    - field.storage.taxonomy_term.field_cat_date_begin
-    - field.storage.taxonomy_term.field_cat_date_end
-    - field.storage.taxonomy_term.field_corp_alt_name
-    - field.storage.node.field_description
     - field.storage.node.field_edtf_date
     - field.storage.node.field_edtf_date_created
     - field.storage.node.field_edtf_date_issued
-    - field.storage.taxonomy_term.field_geo_alt_name
+    - field.storage.node.field_description
     - field.storage.node.field_identifier
     - field.storage.node.field_linked_agent
     - field.storage.node.field_local_identifier
@@ -28,6 +23,11 @@ dependencies:
     - field.storage.node.field_table_of_contents
     - field.storage.node.field_tags
     - field.storage.node.field_temporal_subject
+    - field.storage.taxonomy_term.field_geo_alt_name
+    - field.storage.taxonomy_term.field_corp_alt_name
+    - field.storage.taxonomy_term.field_cat_date_end
+    - field.storage.taxonomy_term.field_cat_date_begin
+    - field.storage.taxonomy_term.field_person_alternate_names
     - field.storage.taxonomy_term.field_person_preferred_name
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
@@ -148,6 +148,11 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_description
+  field_edited_text:
+    label: 'Edited Text'
+    datasource_id: 'entity:node'
+    property_path: 'search_api_reverse_entity_references_media__field_media_of:field_edited_text'
+    type: text
   field_edtf_date:
     label: Date
     datasource_id: 'entity:node'
@@ -436,6 +441,7 @@ processor_settings:
     weights:
       add_properties: 0
       pre_index_save: -10
+  reverse_entity_references: {  }
   solr_date_range:
     weights:
       preprocess_index: 0
