@@ -8,10 +8,15 @@ dependencies:
     - taxonomy
     - search_api
   config:
+    - field.storage.taxonomy_term.field_person_alternate_names
+    - field.storage.taxonomy_term.field_cat_date_begin
+    - field.storage.taxonomy_term.field_cat_date_end
+    - field.storage.taxonomy_term.field_corp_alt_name
+    - field.storage.node.field_description
     - field.storage.node.field_edtf_date
     - field.storage.node.field_edtf_date_created
     - field.storage.node.field_edtf_date_issued
-    - field.storage.node.field_description
+    - field.storage.taxonomy_term.field_geo_alt_name
     - field.storage.node.field_identifier
     - field.storage.node.field_linked_agent
     - field.storage.node.field_local_identifier
@@ -23,11 +28,6 @@ dependencies:
     - field.storage.node.field_table_of_contents
     - field.storage.node.field_tags
     - field.storage.node.field_temporal_subject
-    - field.storage.taxonomy_term.field_geo_alt_name
-    - field.storage.taxonomy_term.field_corp_alt_name
-    - field.storage.taxonomy_term.field_cat_date_end
-    - field.storage.taxonomy_term.field_cat_date_begin
-    - field.storage.taxonomy_term.field_person_alternate_names
     - field.storage.taxonomy_term.field_person_preferred_name
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
@@ -422,6 +422,17 @@ processor_settings:
       field_member_of: node-field_member_of
     weights:
       preprocess_index: -45
+  highlight:
+    highlight: always
+    highlight_partial: true
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields:
+      - rendered_item
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
   html_filter:
     all_fields: false
     fields:
