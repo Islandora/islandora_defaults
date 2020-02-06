@@ -8,15 +8,10 @@ dependencies:
     - taxonomy
     - search_api
   config:
-    - field.storage.taxonomy_term.field_person_alternate_names
-    - field.storage.taxonomy_term.field_cat_date_begin
-    - field.storage.taxonomy_term.field_cat_date_end
-    - field.storage.taxonomy_term.field_corp_alt_name
-    - field.storage.node.field_description
     - field.storage.node.field_edtf_date
     - field.storage.node.field_edtf_date_created
     - field.storage.node.field_edtf_date_issued
-    - field.storage.taxonomy_term.field_geo_alt_name
+    - field.storage.node.field_description
     - field.storage.node.field_identifier
     - field.storage.node.field_linked_agent
     - field.storage.node.field_local_identifier
@@ -28,6 +23,11 @@ dependencies:
     - field.storage.node.field_table_of_contents
     - field.storage.node.field_tags
     - field.storage.node.field_temporal_subject
+    - field.storage.taxonomy_term.field_geo_alt_name
+    - field.storage.taxonomy_term.field_corp_alt_name
+    - field.storage.taxonomy_term.field_cat_date_end
+    - field.storage.taxonomy_term.field_cat_date_begin
+    - field.storage.taxonomy_term.field_person_alternate_names
     - field.storage.taxonomy_term.field_person_preferred_name
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
@@ -338,7 +338,20 @@ field_settings:
       view_mode:
         'entity:node':
           article: search_index
+          islandora_object: search_index
           page: search_index
+        'entity:taxonomy_term':
+          corporate_body: default
+          family: default
+          genre: default
+          geo_location: default
+          language: default
+          person: default
+          physical_form: default
+          resource_types: default
+          subject: default
+          tags: default
+          temporal: default
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'
