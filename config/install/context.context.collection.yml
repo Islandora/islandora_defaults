@@ -8,8 +8,8 @@ dependencies:
     - islandora
 name: collection
 label: Collection
-group: Islandora
-description: 'Islandora collections'
+group: Display
+description: 'Display block of children'
 requireAllConditions: false
 disabled: false
 conditions:
@@ -39,4 +39,4 @@ reactions:
     id: blocks
     saved: false
     include_default_blocks: 1
-weight: 0
+weight: 1

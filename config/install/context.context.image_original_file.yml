@@ -4,9 +4,9 @@ dependencies:
   module:
     - islandora
 name: image_original_file
-label: 'Image Original File'
-group: Islandora
-description: 'Original files for images'
+label: 'Image Derivatives'
+group: Derivatives
+description: 'Derivatives for Images'
 requireAllConditions: true
 disabled: false
 conditions:
@@ -29,4 +29,4 @@ reactions:
       image_generate_a_service_file_from_an_original_file: image_generate_a_service_file_from_an_original_file
       image_generate_a_thumbnail_from_an_original_file: image_generate_a_thumbnail_from_an_original_file
     saved: false
-weight: 0
+weight: -3

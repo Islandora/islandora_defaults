@@ -9,7 +9,7 @@ dependencies:
     - node
 name: repository_content
 label: Content
-group: Islandora
+group: Indexing
 description: 'All repository content'
 requireAllConditions: false
 disabled: false
@@ -42,4 +42,4 @@ reactions:
     id: alter_jsonld_type
     source_field: field_model
     saved: false
-weight: 0
+weight: -5
