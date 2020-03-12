@@ -16,7 +16,6 @@ backend_config:
     scheme: http
     host: 127.0.0.1
     port: '8983'
-    path: /solr
     core: ISLANDORA
     timeout: 5
     index_timeout: 10
