@@ -8,8 +8,8 @@ dependencies:
     - islandora
 name: binary
 label: Binary
-group: Islandora
-description: 'Islandora binary objects'
+group: Display
+description: 'Binary Object Display'
 requireAllConditions: false
 disabled: false
 conditions:

@@ -5,7 +5,7 @@ dependencies:
     - islandora
 name: files_in_fedora
 label: 'Fedora Files'
-group: Islandora
+group: Indexing
 description: 'Files in Fedora'
 requireAllConditions: false
 disabled: false
@@ -28,4 +28,4 @@ reactions:
     actions:
       delete_file_from_fedora: delete_file_from_fedora
     saved: false
-weight: 0
+weight: -6

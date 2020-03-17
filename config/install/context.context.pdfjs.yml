@@ -4,8 +4,8 @@ dependencies:
   module:
     - islandora
 name: pdfjs
-label: PDFjs
-group: Islandora
+label: 'PDFjs Viewer'
+group: Display
 description: 'Displays file using the PDFjs viewer'
 requireAllConditions: false
 disabled: false
