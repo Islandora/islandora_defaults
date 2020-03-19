@@ -14,7 +14,7 @@ services:
 
 branches:
   only:
-    - /^8.x/
+    - /^8.8.x/
     - /master/
 
 before_install:
