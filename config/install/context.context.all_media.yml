@@ -14,6 +14,7 @@ conditions:
     id: entity_bundle
     bundles:
       audio: audio
+      document: document
       extracted_text: extracted_text
       file: file
       image: image
