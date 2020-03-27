@@ -11,9 +11,9 @@
     "issues": "https://github.com/Islandora/documentation/issues"
   },
   "require": {
-    "islandora/islandora": "dev-8.x-1.x",
-    "islandora/openseadragon" : "dev-8.x-1.x",
-    "islandora/controlled_access_terms" : "dev-8.x-1.x",
+    "islandora/islandora": "1.1.0",
+    "islandora/openseadragon": "1.1.0",
+    "islandora/controlled_access_terms": "1.1.0",
     "drupal/field_group" : "^3.0",
     "drupal/permissions_by_term" : "^1.51",
     "drupal/field_permissions" : "^1.0"
