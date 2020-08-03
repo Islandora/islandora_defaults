@@ -2,8 +2,16 @@ name: 'Islandora Search'
 type: module
 description: 'Default configuration for Islandora search'
 core: 8.x
-package: 'Islandora'
+package: Islandora
 dependencies:
   - block
-  - search_api_solr_defaults
+  - controlled_access_terms
+  - controlled_access_terms_defaults
+  - islandora_core_feature
   - islandora_defaults
+  - search_api
+  - search_api_solr_defaults
+  - text
+  - user
+  - views
+core_incompatible: false

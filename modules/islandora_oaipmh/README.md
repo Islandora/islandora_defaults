@@ -18,14 +18,14 @@ immediately in their respective sets. Indexing will happen automatically during
 cron runs but can be triggered manually at `/admin/config/services/rest/oai-pmh/queue`.
 
 This module uses the Dublin Core metadata defined by
-the [repository item content model's RDF mapping](http://islandora-claw.github.io/CLAW/user-documentation/content_types/#update-create-an-rdf-mapping).
+the [repository item content model's RDF mapping](http://islandora.github.io/documentation/user-documentation/content_types/#update-create-an-rdf-mapping).
 However, the RDF mapping does not include support for islandora\_default's use
 of the linked agent field. Including agent links in the OAI-PMH metadata
 currently requires updating the RDF mapping to include a Dublin Core predicate
 for that field or any other additional fields. Alternatively, the rest\_oai\_pmh module 
 also supports defining mappings with the
 [metatag module](https://www.drupal.org/project/metatag) or creating a custom
-metadata profile using the Twig templating system.
+OaiMetadataMap plugin.
 
 ## Configuration
 

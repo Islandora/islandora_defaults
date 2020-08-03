@@ -16,52 +16,97 @@ types:
 fieldMappings:
   field_alternative_title:
     properties:
-      - 'dc:alternative'
+      - 'dcterms:alternative'
   field_edtf_date:
     properties:
-      - 'dc:date'
+      - 'dcterms:date'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_edtf_date_created:
     properties:
-      - 'dc:created'
+      - 'dcterms:created'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_edtf_date_issued:
     properties:
-      - 'dc:issued'
+      - 'dcterms:issued'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
   field_description:
     properties:
-      - 'dc:description'
+      - 'dcterms:description'
   field_extent:
     properties:
-      - 'dc:extent'
+      - 'dcterms:extent'
   field_identifier:
     properties:
-      - 'dc:identifier'
+      - 'dcterms:identifier'
   field_member_of:
     properties:
       - 'pcdm:memberOf'
     mapping_type: rel
   field_resource_type:
     properties:
-      - 'dc:type'
+      - 'dcterms:type'
     mapping_type: rel
   field_rights:
     properties:
-      - 'dc:rights'
+      - 'dcterms:rights'
   field_subject:
     properties:
-      - 'dc:subject'
+      - 'dcterms:subject'
     mapping_type: rel
+  field_language:
+    properties:
+      - 'dcterms:language'
+  field_genre:
+    properties:
+      - 'dcterms:type'
+  field_physical_form:
+    properties:
+      - 'dcterms:format'
+  field_edition:
+    properties:
+      - 'rdau:P60329'
+  field_place_published:
+    properties:
+      - 'relators:pup'
+  field_table_of_contents:
+    properties:
+      - 'dcterms:tableOfContents'
+  field_dewey_classification:
+    properties:
+      - 'dcterms:subject'
+  field_lcc_classification:
+    properties:
+      - 'dcterms:subject'
+  field_subjects_name:
+    properties:
+      - 'dcterms:subject'
+  field_temporal_subject:
+    properties:
+      - 'dcterms:temporal'
+  field_geographic_subject:
+    properties:
+      - 'dcterms:spatial'
+  field_isbn:
+    properties:
+      - 'dbpedia:isbn'
+  field_oclc_number:
+    properties:
+      - 'dbpedia:oclc'
+  field_local_identifier:
+    properties:
+      - 'dcterms:identifier'
+  field_note:
+    properties:
+      - 'skos:note'
   field_weight:
     properties:
       - 'co:index'
   title:
     properties:
-      - 'dc:title'
+      - 'dcterms:title'
   created:
     properties:
       - 'schema:dateCreated'

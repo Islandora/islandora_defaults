@@ -4,9 +4,9 @@ dependencies:
   module:
     - islandora
 name: pdf_original_file
-label: 'PDF Original File'
-group: Islandora
-description: 'Context reactions for pdf documents'
+label: 'PDF Derivatives'
+group: Derivatives
+description: 'Derivatives for PDF documents'
 requireAllConditions: true
 disabled: false
 conditions:
@@ -27,6 +27,6 @@ reactions:
     id: derivative
     actions:
       get_ocr_from_image: get_ocr_from_image
-      image_generate_a_thumbnail_from_an_original_file: image_generate_a_thumbnail_from_an_original_file
+      image_generate_a_thumbnail_from_an_original_file:  digital_document_generate_a_thumbnail_from_an_original_file
     saved: false
-weight: 0
+weight: -6

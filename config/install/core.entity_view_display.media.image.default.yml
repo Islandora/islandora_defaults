@@ -9,6 +9,7 @@ dependencies:
     - field.field.media.image.field_media_of
     - field.field.media.image.field_media_use
     - field.field.media.image.field_mime_type
+    - field.field.media.image.field_original_name
     - field.field.media.image.field_width
     - media.type.image
   module:
@@ -35,6 +36,11 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
+  field_gemini_uri:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_height:
     type: number_integer
     weight: 5
@@ -77,6 +83,13 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  field_original_name:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_width:
     type: number_integer
     weight: 4

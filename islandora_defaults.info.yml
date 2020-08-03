@@ -17,6 +17,7 @@ dependencies:
   - islandora
   - islandora_audio
   - islandora_core_feature
+  - islandora_iiif
   - islandora_image
   - islandora_text_extraction_defaults
   - islandora_video
@@ -30,6 +31,8 @@ dependencies:
   - path
   - pdf
   - rdf
+  - rest
+  - serialization
   - system
   - taxonomy
   - text
