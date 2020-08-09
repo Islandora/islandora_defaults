@@ -14,9 +14,10 @@ conditions:
     id: node_has_term
     negate: 0
     uuid: e5689bd5-7eec-4378-b329-2f35d5bb35b0
-    uri: 'https://schema.org/Book'
+    uri: 'http://openseadragon.github.io,https://schema.org/Book'
     context_mapping:
       node: '@node.node_route_context:node'
+    logic: and
 reactions:
   blocks:
     blocks:
@@ -27,7 +28,7 @@ reactions:
         label_display: 0
         region: content
         weight: '-1'
-        iiif_manifest_url: 'http://localhost:8000/node/[node:nid]/manifest'
+        iiif_manifest_url: 'http://localhost:8000/node/[node:nid]/book-manifest'
         context_mapping: {  }
         theme: carapace
         css_class: ''
