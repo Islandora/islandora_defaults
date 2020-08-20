@@ -494,7 +494,7 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: 'http://pcdm.org/use#OriginalFile'
+          value: 'http://pcdm.org/use#ServiceFile'
           group: 1
           exposed: false
           expose:
