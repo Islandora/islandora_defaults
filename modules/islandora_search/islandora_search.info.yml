@@ -10,7 +10,6 @@ dependencies:
   - islandora_core_feature
   - islandora_defaults
   - search_api
-  - search_api_solr_defaults
   - text
   - user
   - views
