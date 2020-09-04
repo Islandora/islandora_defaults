@@ -9,8 +9,7 @@ dependencies:
   - controlled_access_terms_defaults
   - islandora_core_feature
   - islandora_defaults
-  - search_api
-  - search_api_solr_defaults
+  - search_api_solr
   - text
   - user
   - views

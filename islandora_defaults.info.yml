@@ -3,7 +3,6 @@ description: 'Default configuration for Islandora 8.'
 type: module
 core: 8.x
 dependencies:
-  - comment
   - content_translation
   - context
   - controlled_access_terms
