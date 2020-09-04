@@ -1,6 +1,7 @@
 vid,name,description,external_uri
 islandora_display,"Open Seadragon","Display using the Open Seadragon viewer",http://openseadragon.github.io
 islandora_display,"PDFjs","Display using the PDF.js viewer",http://mozilla.github.io/pdf.js
+islandora_display,"Mirador","Display using the Mirador viewer",https://projectmirador.org
 resource_types,"Collection","An aggregation of resources",http://purl.org/dc/dcmitype/Collection
 resource_types,"Dataset","Data encoded in a defined structure",http://purl.org/dc/dcmitype/Dataset
 resource_types,"Image","A visual representation other than text",http://purl.org/dc/dcmitype/Image
