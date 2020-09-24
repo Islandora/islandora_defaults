@@ -34,7 +34,7 @@ install:
   - COMPOSER_MEMORY_LIMIT=-1 php -d memory_limit=-1 $COMPOSER_PATH require "islandora/islandora_defaults:dev-travis-testing as dev-8.x-1.x" --prefer-source --update-with-dependencies
   - cd web;
   - drush -y --uri=127.0.0.1:8282 en islandora_search
-  - drush -y --uri=127.0.0.1:8282 fim islandora_core_feature,controlled_access_terms_defaults,islandora_defaults,islandora_search
+  - drush -y --uri=127.0.0.1:8282 fim islandora_core_feature,islandora_defaults,islandora_search
 
 script:
   - $SCRIPT_DIR/line_endings.sh $TRAVIS_BUILD_DIR
