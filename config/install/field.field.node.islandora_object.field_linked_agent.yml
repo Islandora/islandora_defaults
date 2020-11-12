@@ -14,7 +14,7 @@ field_name: field_linked_agent
 entity_type: node
 bundle: islandora_object
 label: 'Linked Agent'
-description: ''
+description: 'Agents must already exist in the Person, Family, or Corporate Body taxonomy vocabularies. To create a new term, go to <em>Structure > Vocabulary</em>.'
 required: false
 translatable: false
 default_value: {  }
