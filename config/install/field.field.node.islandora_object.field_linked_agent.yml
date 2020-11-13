@@ -14,7 +14,7 @@ field_name: field_linked_agent
 entity_type: node
 bundle: islandora_object
 label: 'Linked Agent'
-description: ''
+description: 'Create new agents by adding terms to the <a href="/admin/structure/taxonomy/manage/person/overview">Person</a>, <a href="/admin/structure/taxonomy/manage/family/overview">Family</a>, or <a href="/admin/structure/taxonomy/manage/corporate_body/overview">Corporate Body</a> vocabularies.'
 required: false
 translatable: false
 default_value: {  }
