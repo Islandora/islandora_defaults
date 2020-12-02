@@ -21,7 +21,7 @@ display:
   default:
     display_plugin: default
     id: default
-    display_title: main
+    display_title: <ain
     position: 0
     display_options:
       access:
