@@ -6,9 +6,9 @@ dependencies:
   module:
     - views
   theme:
-    - carapace
+    - bartik
 id: exposedformsolr_search_contentpage_1
-theme: carapace
+theme: bartik
 region: sidebar_second
 weight: -5
 provider: null
