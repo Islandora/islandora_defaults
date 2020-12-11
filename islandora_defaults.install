@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @file
  * Install/update hook implementations.
  */
 
 /**
- * Replaces source.keys with source.ids
+ * Replaces source.keys with source.ids.
  */
 function islandora_defaults_update_8001() {
   $config_factory = \Drupal::configFactory();
