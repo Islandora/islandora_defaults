@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.storage.media.field_access_terms
     - media.type.document
-    - taxonomy.vocabulary.islandora_access
 id: media.document.field_access_terms
 field_name: field_access_terms
 entity_type: media
@@ -18,8 +17,7 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
-    target_bundles:
-      islandora_access: islandora_access
+    target_bundles: {  }
     sort:
       field: name
       direction: asc
