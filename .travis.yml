@@ -34,6 +34,7 @@ install:
   - cd web;
   - drush -y --uri=127.0.0.1:8282 en islandora_search
   - drush -y --uri=127.0.0.1:8282 fim islandora_core_feature,islandora_defaults,islandora_search
+  - phpunit --version
 
 script:
   - $SCRIPT_DIR/line_endings.sh $TRAVIS_BUILD_DIR
