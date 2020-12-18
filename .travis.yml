@@ -21,7 +21,7 @@ before_install:
   - export COMPOSER_PATH="/home/travis/.phpenv/versions/$TRAVIS_PHP_VERSION/bin/composer"
 
 install:
-  - git clone -b recommended_project_d9 https://github.com/asulibraries/islandora_ci.git $HOME/islandora_ci
+  - git clone https://github.com/islandora/islandora_ci.git $HOME/islandora_ci
   - $SCRIPT_DIR/travis_setup_drupal.sh
   - git -C "$TRAVIS_BUILD_DIR" checkout -b travis-testing
   - cd $DRUPAL_DIR;
