@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Install/update hook implementations.
+ */
+
+/**
+ * Replaces source.keys with source.ids.
+ */
+function islandora_defaults_update_8001() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('migrate_plus.migration.islandora_defaults_tags');
+  if ($config) {
+    if (!$config->get('source.ids')) {
+      $config->set('source.ids', $config->get('source.keys'));
+      $config->clear('source.keys');
+      $config->save(TRUE);
+    }
+  }
+}

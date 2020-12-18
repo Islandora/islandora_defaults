@@ -32,7 +32,7 @@ reactions:
         region: content_suffix
         weight: '0'
         context_mapping: {  }
-        theme: carapace
+        theme: bartik
         css_class: ''
         unique: 0
         context_id: collection

@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.open_seadragon
-    - field.field.media.image.field_access_terms
     - field.field.media.image.field_file_size
     - field.field.media.image.field_height
     - field.field.media.image.field_media_image
@@ -32,7 +31,6 @@ content:
     region: content
 hidden:
   created: true
-  field_access_terms: true
   field_file_size: true
   field_gemini_uri: true
   field_height: true
@@ -43,5 +41,6 @@ hidden:
   field_width: true
   langcode: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

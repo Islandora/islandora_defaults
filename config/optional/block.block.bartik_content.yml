@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - carapace
-id: carapace_content
-theme: carapace
+    - bartik
+id: bartik_content
+theme: bartik
 region: content
 weight: 7
 provider: null

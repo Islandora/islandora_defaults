@@ -2,6 +2,7 @@ name: 'Islandora Search'
 type: module
 description: 'Default configuration for Islandora search'
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: Islandora
 dependencies:
   - block

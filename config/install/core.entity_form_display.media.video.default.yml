@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_access_terms
     - field.field.media.video.field_file_size
     - field.field.media.video.field_media_of
     - field.field.media.video.field_media_use
@@ -24,12 +23,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_access_terms:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_media_of:
     type: entity_reference_autocomplete
     weight: 4
