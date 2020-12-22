@@ -19,3 +19,17 @@ function islandora_defaults_update_8001() {
     }
   }
 }
+
+/**
+ * Changes migration_tags to an array.
+ */
+function islandora_defaults_update_8002() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('migrate_plus.migration.islandora_defaults_tags');
+  if ($config) {
+    if (!$config->get('migration_tags')) {
+      $config->set('migration_tags', [$config->get('migration_tags')]);
+      $config->save(TRUE);
+    }
+  }
+}
