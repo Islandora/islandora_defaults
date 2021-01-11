@@ -1,8 +1,10 @@
+uuid: 41a1c97b-5283-493a-8d93-8d8653698e41
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.source
+    - field.field.media.video.field_captions
     - field.field.media.video.field_file_size
     - field.field.media.video.field_media_of
     - field.field.media.video.field_media_use
@@ -14,7 +16,7 @@ dependencies:
     module:
       - islandora_core_feature
   module:
-    - file
+    - islandora_defaults
 id: media.video.source
 targetEntityType: media
 bundle: video
@@ -22,11 +24,11 @@ mode: source
 content:
   field_gemini_uri:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_media_video_file:
-    type: file_video
+    type: file_video_caption
     weight: 0
     label: visually_hidden
     settings:
@@ -41,6 +43,7 @@ content:
     region: content
 hidden:
   created: true
+  field_captions: true
   field_file_size: true
   field_media_of: true
   field_media_use: true
