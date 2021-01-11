@@ -5,6 +5,7 @@ namespace Drupal\islandora_defaults\Plugin\Field\FieldFormatter;
 use Drupal\file\Plugin\Field\FieldFormatter\FileVideoFormatter;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Cache\Cache;
+use Drupal\islandora\IslandoraUtils;
 
 /**
  * Plugin implementation of the 'file_video_caption' formatter.
@@ -20,6 +21,80 @@ use Drupal\Core\Cache\Cache;
  */
 class FileVideoCaptionFormatter extends FileVideoFormatter {
 
+
+  /**
+   * The field definition.
+   *
+   * @var \Drupal\Core\Field\FieldDefinitionInterface
+   */
+  protected $fieldDefinition;
+
+  /**
+   * The formatter settings.
+   *
+   * @var array
+   */
+  protected $settings;
+
+  /**
+   * The label display setting.
+   *
+   * @var string
+   */
+  protected $label;
+
+  /**
+   * The view mode.
+   *
+   * @var string
+   */
+  protected $viewMode;
+
+  /**
+   * Islandora utility functions.
+   *
+   * @var \Drupal\islandora\IslandoraUtils
+   */
+  protected $utils;
+
+  /**
+   * Constructs a FormatterBase object.
+   *
+   * @param string $plugin_id
+   *   The plugin_id for the formatter.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param \Drupal\Core\Field\FieldDefinitionInterface $field_definition
+   *   The definition of the field to which the formatter is associated.
+   * @param array $settings
+   *   The formatter settings.
+   * @param string $label
+   *   The formatter label display setting.
+   * @param string $view_mode
+   *   The view mode.
+   * @param array $third_party_settings
+   *   Any third party settings.
+   * @param \Drupal\islandora\IslandoraUtils $utils
+   *   Islandora utils.
+   */
+  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings, IslandoraUtils $utils) {
+    parent::__construct([], $plugin_id, $plugin_definition);
+
+    $this->fieldDefinition = $field_definition;
+    $this->settings = $settings;
+    $this->label = $label;
+    $this->viewMode = $view_mode;
+    $this->thirdPartySettings = $third_party_settings;
+    $this->utils = $utils;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static($plugin_id, $plugin_definition, $configuration['field_definition'], $configuration['settings'], $configuration['label'], $configuration['view_mode'], $configuration['third_party_settings'], $container->get('islandora.utils'));
+  }
+
   /**
    * {@inheritdoc}
    */
@@ -32,7 +107,6 @@ class FileVideoCaptionFormatter extends FileVideoFormatter {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
-    $utils = \Drupal::service('islandora.utils');
 
     $source_files = $this->getSourceFiles($items, $langcode);
     if (empty($source_files)) {
@@ -47,9 +121,9 @@ class FileVideoCaptionFormatter extends FileVideoFormatter {
       if ($first_media->get('field_captions')->entity != NULL) {
         $caption = $first_media->get('field_captions')->entity->createFileUrl();
       }
-      $node = $utils->getParentNode($first_media);
-      $thumbn_term = $utils->getTermForUri('http://pcdm.org/use#ThumbnailImage');
-      $thumb_media = $utils->getMediaWithTerm($node, $thumbn_term);
+      $node = $this->utils->getParentNode($first_media);
+      $thumbn_term = $this->utils->getTermForUri('http://pcdm.org/use#ThumbnailImage');
+      $thumb_media = $this->utils->getMediaWithTerm($node, $thumbn_term);
       if ($thumb_media) {
         $poster = $thumb_media->get('field_media_image')->entity->createFileUrl();
       }

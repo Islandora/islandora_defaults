@@ -25,16 +25,16 @@ function islandora_defaults_theme() {
         'caption' => NULL,
         'files' => [],
         'poster' => NULL,
-        'attributes' => NULL
-      ]
+        'attributes' => NULL,
+      ],
     ],
     'file_audio_with_caption' => [
       'template' => 'file-audio-caption',
       'variables' => [
         'caption' => NULL,
         'files' => [],
-        'attributes' => NULL
-      ]
+        'attributes' => NULL,
+      ],
     ],
   ];
 }
