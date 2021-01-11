@@ -3,9 +3,11 @@
 namespace Drupal\islandora_defaults\Plugin\Field\FieldFormatter;
 
 use Drupal\file\Plugin\Field\FieldFormatter\FileVideoFormatter;
+use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Cache\Cache;
 use Drupal\islandora\IslandoraUtils;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Plugin implementation of the 'file_video_caption' formatter.
@@ -78,13 +80,7 @@ class FileVideoCaptionFormatter extends FileVideoFormatter {
    *   Islandora utils.
    */
   public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, $label, $view_mode, array $third_party_settings, IslandoraUtils $utils) {
-    parent::__construct([], $plugin_id, $plugin_definition);
-
-    $this->fieldDefinition = $field_definition;
-    $this->settings = $settings;
-    $this->label = $label;
-    $this->viewMode = $view_mode;
-    $this->thirdPartySettings = $third_party_settings;
+    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings);
     $this->utils = $utils;
   }
 
