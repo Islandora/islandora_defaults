@@ -1,4 +1,4 @@
-?<?php
+<?php
 
 namespace Drupal\islandora_defaults\Plugin\Field\FieldFormatter;
 
