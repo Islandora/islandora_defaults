@@ -19,6 +19,7 @@ conditions:
     context_mapping:
       node: '@node.node_route_context:node'
     uri: 'http://openseadragon.github.io'
+    logic: and
 reactions:
   view_mode_alter:
     id: view_mode_alter

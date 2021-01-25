@@ -19,6 +19,7 @@ conditions:
     context_mapping:
       node: '@node.node_route_context:node'
     uri: 'http://purl.org/dc/dcmitype/Collection'
+    logic: and
 reactions:
   blocks:
     blocks:
