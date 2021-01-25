@@ -6,7 +6,7 @@ dependencies:
       - islandora_core_feature
 id: file
 label: File
-description: 'Use local files for reusable media.'
+description: 'A binary file, stored in Fedora.'
 source: file
 queue_thumbnail_downloads: false
 new_revision: true

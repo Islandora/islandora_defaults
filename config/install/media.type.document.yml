@@ -6,7 +6,7 @@ dependencies:
       - islandora_core_feature
 id: document
 label: Document
-description: 'An uploaded file or document, such as a PDF.'
+description: 'A file or document, such as a PDF, stored in Fedora.'
 source: file
 queue_thumbnail_downloads: false
 new_revision: true

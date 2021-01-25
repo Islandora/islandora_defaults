@@ -6,7 +6,7 @@ dependencies:
       - islandora_core_feature
 id: audio
 label: Audio
-description: 'A locally hosted audio file.'
+description: 'An audio file, stored in Fedora.'
 source: audio_file
 queue_thumbnail_downloads: false
 new_revision: true
