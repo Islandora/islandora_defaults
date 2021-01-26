@@ -6,7 +6,7 @@ dependencies:
       - islandora_core_feature
 id: file
 label: File
-description: 'Files that do not fit into other types listed here, stored in Fedora. Also use for TIFFs and JP2s.'
+description: 'Files that do not fit into other types listed here. Also use for TIFFs and JP2s.'
 source: file
 queue_thumbnail_downloads: false
 new_revision: true

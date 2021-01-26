@@ -6,7 +6,7 @@ dependencies:
       - islandora_core_feature
 id: image
 label: Image
-description: 'An image file (other than TIFF and JP2 formats), stored in Fedora. Use "File" for TIFF or JP2 files.'
+description: 'An image file (other than TIFF and JP2 formats). Use "File" for TIFF or JP2 files.'
 source: image
 queue_thumbnail_downloads: false
 new_revision: true

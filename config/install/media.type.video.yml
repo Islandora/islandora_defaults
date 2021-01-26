@@ -6,7 +6,7 @@ dependencies:
       - islandora_core_feature
 id: video
 label: Video
-description: 'A video file, stored in Fedora.'
+description: 'A video file.'
 source: video_file
 queue_thumbnail_downloads: false
 new_revision: true
