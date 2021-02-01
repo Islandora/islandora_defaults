@@ -6,7 +6,7 @@ dependencies:
       - islandora_core_feature
 id: file
 label: File
-description: 'Use local files for reusable media.'
+description: 'Files that do not fit into other types listed here. Also use for TIFFs and JP2s.'
 source: file
 queue_thumbnail_downloads: false
 new_revision: true
