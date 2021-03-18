@@ -8,9 +8,10 @@ dependencies:
     - field.field.media.video.field_media_video_file
     - field.field.media.video.field_mime_type
     - field.field.media.video.field_original_name
+    - field.field.media.video.field_track
     - media.type.video
   module:
-    - file
+    - islandora_video
 id: media.video.default
 targetEntityType: media
 bundle: video
@@ -27,9 +28,9 @@ content:
     third_party_settings: {  }
   field_gemini_uri:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_media_of:
     type: entity_reference_label
     weight: 4
@@ -47,7 +48,7 @@ content:
       link: true
     third_party_settings: {  }
   field_media_video_file:
-    type: file_video
+    type: islandora_file_video
     weight: 1
     label: visually_hidden
     settings:
@@ -85,6 +86,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_track: true
   langcode: true
   search_api_excerpt: true
   thumbnail: true

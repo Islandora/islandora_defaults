@@ -9,12 +9,13 @@ dependencies:
     - field.field.media.video.field_media_video_file
     - field.field.media.video.field_mime_type
     - field.field.media.video.field_original_name
+    - field.field.media.video.field_track
     - media.type.video
   enforced:
     module:
       - islandora_core_feature
   module:
-    - file
+    - islandora_video
 id: media.video.source
 targetEntityType: media
 bundle: video
@@ -22,11 +23,11 @@ mode: source
 content:
   field_gemini_uri:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_media_video_file:
-    type: file_video
+    type: islandora_file_video
     weight: 0
     label: visually_hidden
     settings:
@@ -46,6 +47,7 @@ hidden:
   field_media_use: true
   field_mime_type: true
   field_original_name: true
+  field_track: true
   langcode: true
   name: true
   search_api_excerpt: true

@@ -8,9 +8,11 @@ dependencies:
     - field.field.media.video.field_media_video_file
     - field.field.media.video.field_mime_type
     - field.field.media.video.field_original_name
+    - field.field.media.video.field_track
     - media.type.video
   module:
     - file
+    - islandora
     - path
 id: media.video.default
 targetEntityType: media
@@ -52,6 +54,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_track:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: media_track
     region: content
   name:
     type: string_textfield

@@ -8,9 +8,11 @@ dependencies:
     - field.field.media.audio.field_media_use
     - field.field.media.audio.field_mime_type
     - field.field.media.audio.field_original_name
+    - field.field.media.audio.field_track
     - media.type.audio
   module:
     - file
+    - islandora
     - path
 id: media.audio.default
 targetEntityType: media
@@ -52,6 +54,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_track:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: media_track
     region: content
   name:
     type: string_textfield
