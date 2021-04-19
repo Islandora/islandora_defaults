@@ -32,6 +32,7 @@ settings:
     auto_create: 0
     auto_create_bundle: person
   rel_types:
+    'relators:asn': ''
     'relators:abr': 'Abridger (abr)'
     'relators:act': 'Actor (act)'
     'relators:adp': 'Adapter (adp)'
