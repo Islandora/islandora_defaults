@@ -15,6 +15,7 @@
     "islandora/openseadragon" : "dev-8.x-1.x",
     "islandora/controlled_access_terms" : "dev-8.x-1.x",
     "drupal/field_group" : "^3.0",
-    "drupal/field_permissions" : "^1.0"
+    "drupal/field_permissions" : "^1.0",
+    "drupal/pdf": "^1.1"
   }
 }
