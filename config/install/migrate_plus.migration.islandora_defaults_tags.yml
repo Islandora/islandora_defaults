@@ -25,7 +25,7 @@ process:
   field_external_uri:
     plugin: urlencode
     source: external_uri
-  field_authority_link:
+  field_external_authority_link:
     plugin: urlencode
     source: external_uri
 destination:
