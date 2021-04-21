@@ -50,7 +50,6 @@ settings:
     'relators:art': 'Artist'
     'relators:ard': 'Artistic director'
     'relators:asg': 'Assignee'
-    'relators:asn': 'Associated name'
     'relators:att': 'Attributed name'
     'relators:auc': 'Auctioneer'
     'relators:aut': 'Author'
