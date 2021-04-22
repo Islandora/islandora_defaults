@@ -1,6 +1,6 @@
 # ![Islandora Defaults mascot](https://user-images.githubusercontent.com/2371345/67035035-31828c80-f0ef-11e9-8c46-db902caaaa81.png) 
 # Islandora Defaults    
-[![Build Status](https://travis-ci.com//Islandora/islandora_defaults.png?branch=8.x-1.x)](https://travis-ci.com//Islandora/islandora_defaults)
+[![Build Status](https://github.com/islandora/islandora_defaults/actions/workflows/build-8.x-1.x.yml/badge.svg)](https://github.com/Islandora/islandora_defaults/actions)
 [![Contribution Guidelines](http://img.shields.io/badge/CONTRIBUTING-Guidelines-blue.svg)](./CONTRIBUTING.md)
 [![LICENSE](https://img.shields.io/badge/license-GPLv2-blue.svg?style=flat-square)](./LICENSE)
 
