@@ -105,9 +105,6 @@ jobs:
           drush --uri=127.0.0.1:8282 en -y islandora_audio islandora_breadcrumbs islandora_iiif islandora_image islandora_video islandora_text_extraction_defaults islandora_search
           drush --uri=127.0.0.1:8282 fim -y islandora_core_feature,islandora_text_extraction_defaults,islandora_defaults,islandora_search
 
-      - name: Copy PHPunit file
-        run: cp $PHPUNIT_FILE $DRUPAL_DIR/web/core/phpunit.xml
-
       - name: Test scripts
         run: $SCRIPT_DIR/travis_scripts.sh
 
