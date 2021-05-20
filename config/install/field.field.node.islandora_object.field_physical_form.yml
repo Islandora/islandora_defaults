@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_physical_form
     - node.type.islandora_object
-    - taxonomy.vocabulary.physical_form
+    - taxonomy.vocabulary.form
 id: node.islandora_object.field_physical_form
 field_name: field_physical_form
 entity_type: node
