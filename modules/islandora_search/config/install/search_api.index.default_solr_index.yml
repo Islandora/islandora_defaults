@@ -8,25 +8,24 @@ dependencies:
     - taxonomy
     - search_api
   config:
-    - field.storage.node.field_edtf_date
+    - field.storage.node.field_alt_title
     - field.storage.node.field_edtf_date_created
-    - field.storage.node.field_edtf_date_issued
     - field.storage.node.field_description
-    - field.storage.node.field_identifier
-    - field.storage.node.field_linked_agent
-    - field.storage.node.field_local_identifier
-    - field.storage.node.field_member_of
-    - field.storage.node.field_note
-    - field.storage.node.field_physical_form
-    - field.storage.node.field_subject
+    - field.storage.node.field_dewey_classification
+    - field.storage.node.field_edition
+    - field.storage.node.field_extent
+    - field.storage.node.field_full_title
+    - field.storage.node.field_isbn
+    - field.storage.node.field_lcc_classification
+    - field.storage.node.field_oclc_number
+    - field.storage.node.field_resource_type
+    - field.storage.node.field_rights
+    - field.storage.node.field_subject_general
+    - field.storage.node.field_geographic_subject
     - field.storage.node.field_subjects_name
-    - field.storage.node.field_table_of_contents
-    - field.storage.node.field_tags
     - field.storage.node.field_temporal_subject
-    - field.storage.taxonomy_term.field_geo_alt_name
-    - field.storage.taxonomy_term.field_corp_alt_name
-    - field.storage.taxonomy_term.field_cat_date_end
-    - field.storage.taxonomy_term.field_cat_date_begin
+    - field.storage.node.field_subject
+    - field.storage.node.field_tags
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
 third_party_settings:
@@ -74,6 +73,14 @@ field_settings:
     dependencies:
       module:
         - node
+  changed_1:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
   created:
     label: 'Authored on'
     datasource_id: 'entity:node'
@@ -82,38 +89,14 @@ field_settings:
     dependencies:
       module:
         - node
-  description:
-    label: Description
-    datasource_id: 'entity:taxonomy_term'
-    property_path: description
-    type: text
-    dependencies:
-      module:
-        - taxonomy
-  field_cat_date_begin:
-    label: 'Founding Date'
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_cat_date_begin
+  field_alt_title:
+    label: 'Alternative Title'
+    datasource_id: 'entity:node'
+    property_path: field_alt_title
     type: string
     dependencies:
       config:
-        - field.storage.taxonomy_term.field_cat_date_begin
-  field_cat_date_end:
-    label: 'Dissolution Date'
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_cat_date_end
-    type: string
-    dependencies:
-      config:
-        - field.storage.taxonomy_term.field_cat_date_end
-  field_corp_alt_name:
-    label: 'Corporate Body Alternate Name'
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_corp_alt_name
-    type: text
-    dependencies:
-      config:
-        - field.storage.taxonomy_term.field_corp_alt_name
+        - field.storage.node.field_alt_title
   field_description:
     label: Description
     datasource_id: 'entity:node'
@@ -122,19 +105,27 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_description
-  field_edited_text:
-    label: 'Edited Text'
+  field_dewey_classification:
+    label: 'Dewey Classification'
     datasource_id: 'entity:node'
-    property_path: 'search_api_reverse_entity_references_media__field_media_of:field_edited_text'
-    type: text
-  field_edtf_date:
-    label: Date
-    datasource_id: 'entity:node'
-    property_path: field_edtf_date
+    property_path: field_dewey_classification
     type: string
     dependencies:
       config:
-        - field.storage.node.field_edtf_date
+        - field.storage.node.field_dewey_classification
+  field_edited_text:
+    label: 'Reverse reference: <em class="placeholder">Media</em> using <em class="placeholder">Media of</em> » Edited Text'
+    datasource_id: 'entity:node'
+    property_path: 'search_api_reverse_entity_references_media__field_media_of:field_edited_text'
+    type: text
+  field_edition:
+    label: Edition
+    datasource_id: 'entity:node'
+    property_path: field_edition
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_edition
   field_edtf_date_created:
     label: 'Date Created'
     datasource_id: 'entity:node'
@@ -143,106 +134,54 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_edtf_date_created
-  field_edtf_date_issued:
-    label: 'Date Issued'
+  field_extent:
+    label: Extent
     datasource_id: 'entity:node'
-    property_path: field_edtf_date_issued
+    property_path: field_extent
     type: string
     dependencies:
       config:
-        - field.storage.node.field_edtf_date_issued
-  field_geo_alt_name:
-    label: 'Alternate Name'
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_geo_alt_name
+        - field.storage.node.field_extent
+  field_full_title:
+    label: 'Full Title'
+    datasource_id: 'entity:node'
+    property_path: field_full_title
     type: text
     dependencies:
       config:
-        - field.storage.taxonomy_term.field_geo_alt_name
-  field_identifier:
-    label: Identifier
+        - field.storage.node.field_full_title
+  field_isbn:
+    label: ISBN
     datasource_id: 'entity:node'
-    property_path: field_identifier
+    property_path: field_isbn
     type: string
     dependencies:
       config:
-        - field.storage.node.field_identifier
-  field_linked_agent:
-    label: 'Linked Agent'
+        - field.storage.node.field_isbn
+  field_lcc_classification:
+    label: 'Library of Congress Classification'
     datasource_id: 'entity:node'
-    property_path: 'field_linked_agent:entity:name'
+    property_path: field_lcc_classification
     type: string
     dependencies:
       config:
-        - field.storage.node.field_linked_agent
-      module:
-        - taxonomy
-        - taxonomy
-  field_local_identifier:
-    label: 'Local Identifier'
+        - field.storage.node.field_lcc_classification
+  field_oclc_number:
+    label: 'OCLC Number'
     datasource_id: 'entity:node'
-    property_path: field_local_identifier
+    property_path: field_oclc_number
     type: string
     dependencies:
       config:
-        - field.storage.node.field_local_identifier
-  field_member_of:
-    label: 'Member of'
+        - field.storage.node.field_oclc_number
+  field_rights:
+    label: Rights
     datasource_id: 'entity:node'
-    property_path: field_member_of
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_member_of
-  field_note:
-    label: Note
-    datasource_id: 'entity:node'
-    property_path: field_note
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_note
-  field_physical_form:
-    label: 'Physical Form'
-    datasource_id: 'entity:node'
-    property_path: 'field_physical_form:entity:name'
+    property_path: field_rights
     type: string
     dependencies:
       config:
-        - field.storage.node.field_physical_form
-      module:
-        - taxonomy
-        - taxonomy
-  field_subject:
-    label: Subject
-    datasource_id: 'entity:node'
-    property_path: 'field_subject:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_subject
-      module:
-        - taxonomy
-        - taxonomy
-  field_subjects_name:
-    label: 'Subject (name)'
-    datasource_id: 'entity:node'
-    property_path: 'field_subjects_name:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_subjects_name
-      module:
-        - taxonomy
-        - taxonomy
-  field_table_of_contents:
-    label: 'Table of Contents'
-    datasource_id: 'entity:node'
-    property_path: field_table_of_contents
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_table_of_contents
+        - field.storage.node.field_rights
   field_tags:
     label: Tags
     datasource_id: 'entity:node'
@@ -251,25 +190,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_tags
-  field_temporal_subject:
-    label: 'Temporal Subject'
+  name_1:
+    label: 'Resource Type'
     datasource_id: 'entity:node'
-    property_path: 'field_temporal_subject:entity:name'
+    property_path: 'field_resource_type:entity:name'
     type: string
     dependencies:
       config:
-        - field.storage.node.field_temporal_subject
+        - field.storage.node.field_resource_type
       module:
         - taxonomy
-        - taxonomy
-  name:
-    label: Name
-    datasource_id: 'entity:taxonomy_term'
-    property_path: name
-    type: text
-    boost: !!float 8
-    dependencies:
-      module:
         - taxonomy
   node_grants:
     label: 'Node access information'
@@ -288,20 +218,7 @@ field_settings:
       view_mode:
         'entity:node':
           article: search_index
-          islandora_object: search_index
           page: search_index
-        'entity:taxonomy_term':
-          corporate_body: default
-          family: default
-          genre: default
-          geo_location: default
-          language: default
-          person: default
-          physical_form: default
-          resource_types: default
-          subject: default
-          tags: default
-          temporal: default
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'
@@ -320,6 +237,73 @@ field_settings:
     dependencies:
       module:
         - node
+  subject_aggregated:
+    label: 'Subjects (All)'
+    property_path: aggregated_field
+    type: string
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/field_geographic_subject'
+        - 'entity:node/field_subject'
+        - 'entity:node/field_subject_general'
+        - 'entity:node/field_subjects_name'
+        - 'entity:node/field_temporal_subject'
+  subject_general_name:
+    label: Subject
+    datasource_id: 'entity:node'
+    property_path: 'field_subject_general:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_subject_general
+      module:
+        - taxonomy
+        - taxonomy
+  subject_geographic_name:
+    label: 'Subject (Geographic)'
+    datasource_id: 'entity:node'
+    property_path: 'field_geographic_subject:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_geographic_subject
+      module:
+        - taxonomy
+        - taxonomy
+  subject_names_name:
+    label: 'Subject (Names)'
+    datasource_id: 'entity:node'
+    property_path: 'field_subjects_name:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_subjects_name
+      module:
+        - taxonomy
+        - taxonomy
+  subject_temporal_name:
+    label: 'Subject (Temporal)'
+    datasource_id: 'entity:node'
+    property_path: 'field_temporal_subject:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_temporal_subject
+      module:
+        - taxonomy
+        - taxonomy
+  subject_topical_name:
+    label: 'Subject (Topical)'
+    datasource_id: 'entity:node'
+    property_path: 'field_subject:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_subject
+      module:
+        - taxonomy
+        - taxonomy
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -329,6 +313,16 @@ field_settings:
     dependencies:
       module:
         - node
+  title_aggregated:
+    label: 'Title (All)'
+    property_path: aggregated_field
+    type: string
+    configuration:
+      type: union
+      fields:
+        - 'entity:node/field_alt_title'
+        - 'entity:node/field_full_title'
+        - 'entity:node/title'
   type:
     label: 'Content type'
     datasource_id: 'entity:node'
@@ -355,17 +349,6 @@ datasource_settings:
     languages:
       default: true
       selected: {  }
-  'entity:taxonomy_term':
-    bundles:
-      default: true
-      selected:
-        - islandora_access
-        - islandora_display
-        - islandora_media_use
-        - islandora_models
-    languages:
-      default: true
-      selected: {  }
 processor_settings:
   add_url:
     weights:
@@ -380,22 +363,6 @@ processor_settings:
   entity_status:
     weights:
       preprocess_index: -10
-  hierarchy:
-    fields:
-      field_member_of: node-field_member_of
-    weights:
-      preprocess_index: -45
-  highlight:
-    highlight: always
-    highlight_partial: true
-    excerpt: true
-    excerpt_length: 256
-    exclude_fields:
-      - rendered_item
-    prefix: '<strong>'
-    suffix: '</strong>'
-    weights:
-      postprocess_query: 0
   html_filter:
     all_fields: false
     fields:
@@ -426,3 +393,4 @@ options:
   index_directly: true
   cron_limit: 50
 server: default_solr_server
+

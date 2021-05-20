@@ -9,8 +9,8 @@ id: node.islandora_object.field_physical_form
 field_name: field_physical_form
 entity_type: node
 bundle: islandora_object
-label: 'Physical Form'
-description: ''
+label: Form
+description: 'The physical format of the original resource being described. If the resource is a physical object, the physical form is recorded here. If the resource is born-digital, the original digital form is recorded here. Details of the formats of resource representations stored in Islandora should be recorded on the relevant Media files. '
 required: false
 translatable: false
 default_value: {  }
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      physical_form: physical_form
+      form:form
     sort:
       field: name
       direction: asc

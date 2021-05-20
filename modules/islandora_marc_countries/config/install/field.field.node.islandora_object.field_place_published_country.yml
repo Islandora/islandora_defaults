@@ -9,7 +9,7 @@ id: node.islandora_object.field_place_published_country
 field_name: field_place_published_country
 entity_type: node
 bundle: islandora_object
-label: 'Place Published (Country)'
+label: 'Country of Publication'
 description: ''
 required: false
 translatable: false

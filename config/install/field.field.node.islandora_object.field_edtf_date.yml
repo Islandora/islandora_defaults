@@ -10,8 +10,8 @@ id: node.islandora_object.field_edtf_date
 field_name: field_edtf_date
 entity_type: node
 bundle: islandora_object
-label: Date
-description: ''
+label: 'Date (Unspecified)'
+description: 'A date without a type or relationship to the resource specified'
 required: false
 translatable: false
 default_value: {  }

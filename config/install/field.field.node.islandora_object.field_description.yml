@@ -12,7 +12,7 @@ field_name: field_description
 entity_type: node
 bundle: islandora_object
 label: Description
-description: ''
+description: 'Description of the resource. Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.'
 required: false
 translatable: true
 default_value: {  }

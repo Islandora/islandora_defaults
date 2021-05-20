@@ -9,7 +9,7 @@ field_name: field_extent
 entity_type: node
 bundle: islandora_object
 label: Extent
-description: ''
+description: 'The size or duration of the resource in its original form. Extent of representations of the resource stored in Islandora should be recorded on the relevant Media files.'
 required: false
 translatable: false
 default_value:
