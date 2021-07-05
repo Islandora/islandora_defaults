@@ -34,7 +34,7 @@ function islandora_defaults_update_8002() {
   }
 }
 
-/** 
+/**
  * Deletes the context for indexing in Gemini.
  */
 function islandora_defaults_update_8003() {
