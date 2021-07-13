@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.form.field_authority_sources
+    - field.field.taxonomy_term.form.field_authority_link
     - taxonomy.vocabulary.form
   module:
     - controlled_access_terms
@@ -21,7 +21,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_authority_sources:
+  field_authority_link:
     weight: 101
     settings:
       placeholder_url: ''
