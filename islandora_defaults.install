@@ -33,3 +33,14 @@ function islandora_defaults_update_8002() {
     }
   }
 }
+
+/**
+ * Deletes the context for indexing in Gemini.
+ */
+function islandora_defaults_update_8003() {
+  $config_factory = \Drupal::configFactory();
+  $context = $config_factory->getEditable('context.context.files_in_fedora');
+  if ($context) {
+    $context->delete();
+  }
+}
