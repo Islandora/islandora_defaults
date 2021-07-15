@@ -8,8 +8,8 @@ id: node.islandora_object.field_weight
 field_name: field_weight
 entity_type: node
 bundle: islandora_object
-label: Weight
-description: 'Indicates the order of a resource in a collection of resources.'
+label: 'Custom Sort Value'
+description: 'Enter numeric values to force a custom sort order within a collection of resources. See <a href="https://www.drupal.org/node/307797">external documentation for the <i>Weight</i> module</a>. '
 required: false
 translatable: false
 default_value: {  }

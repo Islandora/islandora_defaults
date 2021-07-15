@@ -9,8 +9,8 @@ id: node.islandora_object.field_resource_type
 field_name: field_resource_type
 entity_type: node
 bundle: islandora_object
-label: 'Resource Type'
-description: ''
+label: Type
+description: 'The general nature or genre of the content of the resource. To describe the digital or physical format of the resource, use Form instead.'
 required: false
 translatable: false
 default_value: {  }

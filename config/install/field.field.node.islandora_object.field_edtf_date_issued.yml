@@ -11,7 +11,7 @@ field_name: field_edtf_date_issued
 entity_type: node
 bundle: islandora_object
 label: 'Date Issued'
-description: ''
+description: 'Date of formal issuance of the resource. This includes publication dates.'
 required: false
 translatable: false
 default_value: {  }

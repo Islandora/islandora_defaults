@@ -11,8 +11,8 @@ id: node.islandora_object.field_subjects_name
 field_name: field_subjects_name
 entity_type: node
 bundle: islandora_object
-label: 'Subjects (name)'
-description: ''
+label: 'Subject (Name)'
+description: 'Any new term added by typing it here will be added to the Person taxonomy. If you need to create a new Corporate Body or Family taxonomy term, do <i>Structure > Taxonomy > [the appropriate taxonomy] > Add terms</i> to add terms. You may need to save this form and reload it for your terms to be available here.'
 required: false
 translatable: false
 default_value: {  }
@@ -28,5 +28,5 @@ settings:
       field: name
       direction: asc
     auto_create: true
-    auto_create_bundle: corporate_body
+    auto_create_bundle: person
 field_type: entity_reference

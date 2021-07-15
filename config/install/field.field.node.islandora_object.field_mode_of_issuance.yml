@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_place_published_country
+    - field.storage.node.field_mode_of_issuance
     - node.type.islandora_object
-    - taxonomy.vocabulary.country
-id: node.islandora_object.field_place_published_country
-field_name: field_place_published_country
+    - taxonomy.vocabulary.issuance_modes
+id: node.islandora_object.field_mode_of_issuance
+field_name: field_mode_of_issuance
 entity_type: node
 bundle: islandora_object
-label: 'Place Published (Country)'
+label: 'Mode of Issuance'
 description: ''
 required: false
 translatable: false
@@ -19,10 +19,10 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      country: country
+      issuance_modes: issuance_modes
     sort:
       field: name
       direction: asc
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

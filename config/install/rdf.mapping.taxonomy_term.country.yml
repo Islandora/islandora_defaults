@@ -20,4 +20,3 @@ fieldMappings:
   field_authority_link:
     properties:
       - 'schema:sameAs'
-

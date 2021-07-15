@@ -12,7 +12,7 @@ id: node.islandora_object.field_display_hints
 field_name: field_display_hints
 entity_type: node
 bundle: islandora_object
-label: 'Display hints'
+label: 'Display Hints'
 description: 'Terms that will change how this resource is displayed.'
 required: false
 translatable: false

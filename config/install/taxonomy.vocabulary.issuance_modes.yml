@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Issuance Mode'
+vid: issuance_modes
+description: 'Terms from Library of Congress'' MARC Issuance List vocabulary'
+weight: 0

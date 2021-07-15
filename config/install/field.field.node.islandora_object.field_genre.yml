@@ -10,7 +10,7 @@ field_name: field_genre
 entity_type: node
 bundle: islandora_object
 label: Genre
-description: ''
+description: 'A term or terms that designate a category characterizing a particular style, form, or content, such as artistic, musical, literary composition, etc.'
 required: false
 translatable: false
 default_value: {  }

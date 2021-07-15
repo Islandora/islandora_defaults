@@ -4,12 +4,12 @@ dependencies:
   config:
     - field.storage.node.field_temporal_subject
     - node.type.islandora_object
-    - taxonomy.vocabulary.temporal
+    - taxonomy.vocabulary.temporal_subjects
 id: node.islandora_object.field_temporal_subject
 field_name: field_temporal_subject
 entity_type: node
 bundle: islandora_object
-label: 'Temporal Subject'
+label: 'Subject (Temporal)'
 description: ''
 required: false
 translatable: false
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      temporal: temporal
+      temporal_subjects: temporal_subjects
     sort:
       field: name
       direction: asc

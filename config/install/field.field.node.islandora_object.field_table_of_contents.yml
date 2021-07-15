@@ -8,7 +8,7 @@ id: node.islandora_object.field_table_of_contents
 field_name: field_table_of_contents
 entity_type: node
 bundle: islandora_object
-label: 'Table Of Contents'
+label: 'Table of Contents'
 description: ''
 required: false
 translatable: true

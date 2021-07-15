@@ -9,7 +9,7 @@ field_name: field_pid
 entity_type: node
 bundle: islandora_object
 label: PID
-description: ''
+description: 'PID of this object in Islandora 7.x (applies to migrated objects only)'
 required: false
 translatable: false
 default_value: {  }

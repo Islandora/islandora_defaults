@@ -14,7 +14,10 @@ bundle: islandora_object
 types:
   - 'pcdm:Object'
 fieldMappings:
-  field_alternative_title:
+  field_full_title:
+    properties:
+      - 'rdau:P60515'
+  field_alt_title:
     properties:
       - 'dcterms:alternative'
   field_edtf_date:
@@ -32,9 +35,38 @@ fieldMappings:
       - 'dcterms:issued'
     datatype_callback:
       callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
+  field_copyright_date:
+    properties:
+      - 'dcterms:dateCopyrighted'
+    datatype_callback:
+      callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
+  field_date_captured:
+    properties:
+      - 'premis:creation'
+    datatype_callback:
+      callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
+  field_date_modified:
+    properties:
+      - 'dcterms:modified'
+    datatype_callback:
+      callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
+  field_date_valid:
+    properties:
+      - 'dcterms:valid'
+    datatype_callback:
+      callable: 'Drupal\controlled_access_terms\EDTFConverter::dateIso8601Value'
+  field_frequency:
+    properties:
+      - 'rdau:P60538'
+  field_mode_of_issuance:
+    properties:
+      - 'rdau:P60051'
   field_description:
     properties:
       - 'dcterms:description'
+  field_abstract:
+    properties:
+      - 'dcterms:abstract'
   field_extent:
     properties:
       - 'dcterms:extent'
@@ -51,7 +83,11 @@ fieldMappings:
     mapping_type: rel
   field_rights:
     properties:
-      - 'dcterms:rights'
+      - 'dc11:rights'
+  field_subject_general:
+    properties:
+      - 'dcterms:subject'
+    mapping_type: rel
   field_subject:
     properties:
       - 'dcterms:subject'
@@ -71,15 +107,27 @@ fieldMappings:
   field_place_published:
     properties:
       - 'relators:pup'
+  field_place_published_country:
+    properties:
+      - 'relators:pup'
   field_table_of_contents:
     properties:
       - 'dcterms:tableOfContents'
+  field_coordinates:
+    properties:
+      - 'dcterms:spatial'
+  field_coordinates_text:
+    properties:
+      - 'dcterms:spatial'
+  field_classification:
+    properties:
+      - 'dc11:subject'
   field_dewey_classification:
     properties:
-      - 'dcterms:subject'
+      - 'dc11:subject'
   field_lcc_classification:
     properties:
-      - 'dcterms:subject'
+      - 'dc11:subject'
   field_subjects_name:
     properties:
       - 'dcterms:subject'

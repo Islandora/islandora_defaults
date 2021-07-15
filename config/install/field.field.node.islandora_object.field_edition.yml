@@ -8,7 +8,7 @@ id: node.islandora_object.field_edition
 field_name: field_edition
 entity_type: node
 bundle: islandora_object
-label: Edition
+label: 'Edition Statement'
 description: ''
 required: false
 translatable: true
