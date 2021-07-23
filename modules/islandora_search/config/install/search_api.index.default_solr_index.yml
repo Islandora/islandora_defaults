@@ -73,14 +73,6 @@ field_settings:
     dependencies:
       module:
         - node
-  changed_1:
-    label: Changed
-    datasource_id: 'entity:node'
-    property_path: changed
-    type: date
-    dependencies:
-      module:
-        - node
   created:
     label: 'Authored on'
     datasource_id: 'entity:node'
@@ -190,7 +182,7 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_tags
-  name_1:
+  field_resource_type:
     label: 'Resource Type'
     datasource_id: 'entity:node'
     property_path: 'field_resource_type:entity:name'
