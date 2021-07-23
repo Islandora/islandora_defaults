@@ -17,7 +17,9 @@ dependencies:
     - field.storage.node.field_full_title
     - field.storage.node.field_isbn
     - field.storage.node.field_lcc_classification
+    - field.storage.node.field_linked_agent
     - field.storage.node.field_oclc_number
+    - field.storage.node.field_physical_form
     - field.storage.node.field_resource_type
     - field.storage.node.field_rights
     - field.storage.node.field_subject_general
@@ -64,16 +66,7 @@ field_settings:
       module:
         - node
         - user
-        - user
   changed:
-    label: Changed
-    datasource_id: 'entity:node'
-    property_path: changed
-    type: date
-    dependencies:
-      module:
-        - node
-  changed_1:
     label: Changed
     datasource_id: 'entity:node'
     property_path: changed
@@ -166,6 +159,16 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_lcc_classification
+  field_linked_agent_name:
+    label: 'Linked Agent'
+    datasource_id: 'entity:node'
+    property_path: 'field_linked_agent:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_linked_agent
+      module:
+        - taxonomy
   field_oclc_number:
     label: 'OCLC Number'
     datasource_id: 'entity:node'
@@ -174,6 +177,26 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_oclc_number
+  field_physical_form:
+    label: 'Physical Form'
+    datasource_id: 'entity:node'
+    property_path: 'field_physical_form:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_physical_form
+      module:
+        - taxonomy
+  field_resource_type:
+    label: 'Resource Type'
+    datasource_id: 'entity:node'
+    property_path: 'field_resource_type:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_resource_type
+      module:
+        - taxonomy
   field_rights:
     label: Rights
     datasource_id: 'entity:node'
@@ -190,17 +213,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_tags
-  name_1:
-    label: 'Resource Type'
-    datasource_id: 'entity:node'
-    property_path: 'field_resource_type:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_resource_type
-      module:
-        - taxonomy
-        - taxonomy
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -259,7 +271,6 @@ field_settings:
         - field.storage.node.field_subject_general
       module:
         - taxonomy
-        - taxonomy
   subject_geographic_name:
     label: 'Subject (Geographic)'
     datasource_id: 'entity:node'
@@ -269,7 +280,6 @@ field_settings:
       config:
         - field.storage.node.field_geographic_subject
       module:
-        - taxonomy
         - taxonomy
   subject_names_name:
     label: 'Subject (Names)'
@@ -281,7 +291,6 @@ field_settings:
         - field.storage.node.field_subjects_name
       module:
         - taxonomy
-        - taxonomy
   subject_temporal_name:
     label: 'Subject (Temporal)'
     datasource_id: 'entity:node'
@@ -292,7 +301,6 @@ field_settings:
         - field.storage.node.field_temporal_subject
       module:
         - taxonomy
-        - taxonomy
   subject_topical_name:
     label: 'Subject (Topical)'
     datasource_id: 'entity:node'
@@ -302,7 +310,6 @@ field_settings:
       config:
         - field.storage.node.field_subject
       module:
-        - taxonomy
         - taxonomy
   title:
     label: Title
@@ -378,6 +385,7 @@ processor_settings:
     weights:
       preprocess_index: -3
       preprocess_query: -6
+  language_with_fallback: {  }
   rendered_item:
     weights:
       add_properties: 0
@@ -393,4 +401,3 @@ options:
   index_directly: true
   cron_limit: 50
 server: default_solr_server
-

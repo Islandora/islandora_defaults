@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: Form
-vid: form
-description: 'Terms describing physical format of objects'
-weight: 0
