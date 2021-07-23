@@ -8,6 +8,7 @@ dependencies:
   - block
   - controlled_access_terms
   - controlled_access_terms_defaults
+  - facets
   - islandora_core_feature
   - islandora_defaults
   - search_api_solr
