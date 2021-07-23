@@ -1,3 +1,4 @@
+uuid: 780e9feb-3e79-4d58-9b36-f88c2a82bac7
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,7 @@ dependencies:
     - facets.facet.creators_and_contributors
   module:
     - facets
+    - islandora
     - system
   theme:
     - bartik
@@ -18,11 +20,16 @@ settings:
   id: 'facet_block:creators_and_contributors'
   label: 'Creators and Contributors'
   provider: facets
-  label_display: visible
+  label_display: '0'
   block_id: creatorsandcontributors
 visibility:
   request_path:
     id: request_path
     pages: /solr-search/content
+    negate: false
+    context_mapping: {  }
+  media_source_mimetype:
+    id: media_source_mimetype
+    mimetype: ''
     negate: false
     context_mapping: {  }
