@@ -16,6 +16,7 @@ conditions:
       audio: audio
       document: document
       extracted_text: extracted_text
+      fits_technical_metadata: fits_technical_metadata
       file: file
       image: image
       video: video
