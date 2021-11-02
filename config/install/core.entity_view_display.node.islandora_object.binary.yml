@@ -71,6 +71,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_abstract:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_classification:
     type: string
     weight: 28
@@ -327,7 +334,6 @@ hidden:
   display_media_entity_view_1: true
   display_media_service_file: true
   display_media_thumbnail: true
-  field_abstract: true
   field_alt_title: true
   field_copyright_date: true
   field_date_captured: true
