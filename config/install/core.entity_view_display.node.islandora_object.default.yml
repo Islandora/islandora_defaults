@@ -70,7 +70,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
     region: content
   field_alt_title:
     weight: 4
