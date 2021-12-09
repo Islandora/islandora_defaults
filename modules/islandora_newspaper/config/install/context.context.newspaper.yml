@@ -1,0 +1,47 @@
+
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.newspaper
+  module:
+    - islandora
+    - views
+label: Newspaper
+name: newspaper
+group: Display
+description: 'Block display for newspaper.'
+requireAllConditions: false
+disabled: false
+conditions:
+  node_has_term:
+    id: node_has_term
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uri: 'https://schema.org/Newspaper'
+    logic: and
+reactions:
+  blocks:
+    id: blocks
+    blocks:
+      38392567-fad4-4042-ba4a-3de8162de1a2:
+        uuid: 38392567-fad4-4042-ba4a-3de8162de1a2
+        id: 'views_block:newspaper-block_2'
+        label: ''
+        provider: views
+        label_display: visible
+        region: content
+        weight: '0'
+        custom_id: views_block_newspaper_block_2
+        theme: bartik
+        css_class: ''
+        unique: 0
+        context_id: newspaper
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0
