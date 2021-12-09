@@ -1,9 +1,6 @@
-* build a view
-* add a context for block placement
-
-name: 'Islandora Search'
+name: 'Islandora Newspaper'
 type: module
-description: 'Default configuration for Islandora search'
+description: 'Default configuration for Islandora newspaper view'
 core: 8.x
 core_version_requirement: ^8 || ^9
 package: Islandora
