@@ -11,7 +11,7 @@
     "issues": "https://github.com/Islandora/documentation/issues"
   },
   "require": {
-    "whikloj/islandora": "dev-issue-1224-test",
+    "islandora/islandora": "dev-issue-1224-test",
     "islandora/openseadragon" : "^2",
     "islandora/controlled_access_terms" : "^2",
     "drupal/field_group" : "^3.0",
