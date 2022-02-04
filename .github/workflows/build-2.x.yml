@@ -51,7 +51,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: islandora/islandora_ci
-          ref: actions_path
+          ref: actions_patch
           path: islandora_ci
 
       - name: Setup PHP
