@@ -60,10 +60,9 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           tools: composer:v2
 
-      - name: Setup Mysql client
+      - name: Update Packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y mysql-client
 
       - name: Set environment variables
         run: |
