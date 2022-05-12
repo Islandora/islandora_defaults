@@ -22,7 +22,7 @@ Current maintainers:
 
 ## Documentation
 
-Further documentation for this module is available on the [Islandora 8 documentation site](https://islandora.github.io/documentation/).
+Further [documentation for this module](https://islandora.github.io/documentation/reference/islandora_defaults_reference/) is available on the [Islandora 8 documentation site](https://islandora.github.io/documentation/).
 
 ## Troubleshooting/Issues
 
