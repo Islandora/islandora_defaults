@@ -13,9 +13,7 @@ dependencies:
     - rest
     - serialization
     - taxonomy
-    - user
-_core:
-  default_config_hash: LdlFuH72RwGAI7DWqKggg0dlRE4LEvCAojgFdg7u4qQ
+    - user 
 id: iiif_manifest
 label: 'IIIF Manifest'
 module: views
@@ -622,6 +620,10 @@ display:
     display_plugin: rest_export
     position: 3
     display_options:
+      pager:
+        type: none
+        options:
+          offset: 0
       style:
         type: iiif_manifest
         options:
@@ -663,3 +665,4 @@ display:
       tags:
         - 'config:field.storage.media.field_media_file'
         - 'config:field.storage.media.field_media_image'
+
