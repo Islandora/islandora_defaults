@@ -99,7 +99,6 @@ jobs:
           mkdir -p web/sites/simpletest/browser_output
         continue-on-error: ${{ matrix.allowed_failure }}
 
-
       - name: Setup composer paths
         run: |
           git -C "$GITHUB_WORKSPACE/build_dir" checkout -b github-testing
