@@ -20,13 +20,20 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        php-versions: ["7.4"]
-        drupal-version: ["8.9.11", "9.1.5"]
+        php-versions: ["7.4", "8.0", "8.1"]
+        drupal-version: ["9.3.x", "9.4.x", "9.5.x-dev"]
+        mysql: ["8.0"]
+        include:
+          - allowed_failure: false
+          - php-versions: "8.1"
+            allowed_failure: true
 
+    name: PHP ${{ matrix.php-versions }} | drupal ${{ matrix.drupal-version }} | mysql ${{ matrix.mysql }}    
     services:
       mysql:
-        image: mysql:5.7
+        image: mysql:${{ matrix.mysql }}
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
           MYSQL_DATABASE: drupal
@@ -59,6 +66,12 @@ jobs:
         with:
           php-version: ${{ matrix.php-versions }}
           tools: composer:v2
+      
+      - name: Setup Mysql client
+        run: |
+          sudo apt-get update
+          sudo apt-get remove -y mysql-client mysql-common
+          sudo apt-get install -y mysql-client
 
       - name: Update Packages
         run: |
@@ -84,6 +97,8 @@ jobs:
           cd $DRUPAL_DIR
           chmod -R u+w web/sites/default
           mkdir -p web/sites/simpletest/browser_output
+        continue-on-error: ${{ matrix.allowed_failure }}
+
 
       - name: Setup composer paths
         run: |
@@ -100,6 +115,7 @@ jobs:
           cd $DRUPAL_DIR/web
           drush --uri=127.0.0.1:8282 en -y islandora_audio islandora_breadcrumbs islandora_iiif islandora_image islandora_video islandora_text_extraction_defaults islandora_search
           drush --uri=127.0.0.1:8282 fim -y islandora_core_feature,islandora_text_extraction_defaults,islandora_defaults,islandora_search
+
 
       - name: Test scripts
         run: $SCRIPT_DIR/travis_scripts.sh
