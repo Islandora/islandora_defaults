@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_temporal_subject
     - node.type.islandora_object
     - taxonomy.vocabulary.temporal_subjects
-  module:
-    - controlled_access_terms
 id: node.islandora_object.field_temporal_subject
 field_name: field_temporal_subject
 entity_type: node

@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - islandora
+    - openseadragon
 name: openseadragon_block
 label: 'Paged Content - Openseadragon'
 group: Display
@@ -24,8 +25,8 @@ reactions:
       4fe759c9-e1bf-4709-871c-7b8a407c840b:
         id: openseadragon_block
         label: 'Openseadragon block'
-        provider: openseadragon
         label_display: 0
+        provider: openseadragon
         region: content
         weight: '-1'
         iiif_manifest_url: 'http://localhost:8000/node/[node:nid]/book-manifest'
@@ -38,8 +39,8 @@ reactions:
       16401a13-1031-4ffe-96b2-5909df309f6a:
         id: openseadragon_block
         label: 'Openseadragon block'
-        provider: openseadragon
         label_display: visible
+        provider: openseadragon
         region: content
         weight: '0'
         iiif_manifest_url: 'http://localhost:8000/node/[node:nid]/book-manifest'

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.pdfjs
+    - field.storage.media.field_display_hint
+    - media.type.document
+  module:
+    - view_mode_switch
+id: media.document.field_display_hint
+field_name: field_display_hint
+entity_type: media
+bundle: document
+label: 'Display Hint'
+description: 'Override the default viewer with this view mode'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_view_modes:
+    pdfjs: pdfjs
+field_type: view_mode_switch

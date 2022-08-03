@@ -4,12 +4,12 @@ dependencies:
   config:
     - field.storage.media.field_media_file
     - media.type.file
+  module:
+    - file
   enforced:
     module:
       - media
       - islandora_core_feature
-  module:
-    - file
 id: media.file.field_media_file
 field_name: field_media_file
 entity_type: media

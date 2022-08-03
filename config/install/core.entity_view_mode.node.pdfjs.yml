@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - node
-id: node.pdfjs
-label: PDFjs
-targetEntityType: node
-cache: true

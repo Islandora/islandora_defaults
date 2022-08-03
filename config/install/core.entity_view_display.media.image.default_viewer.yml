@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.source
+    - core.entity_view_mode.media.default_viewer
     - field.field.media.image.field_display_hint
     - field.field.media.image.field_file_size
     - field.field.media.image.field_height
@@ -15,20 +15,19 @@ dependencies:
     - media.type.image
   module:
     - islandora
-  enforced:
-    module:
-      - islandora_core_feature
-id: media.image.source
+id: media.image.default_viewer
 targetEntityType: media
 bundle: image
-mode: source
+mode: default_viewer
 content:
   field_media_image:
     type: islandora_image
     label: visually_hidden
     settings:
-      image_link: content
+      image_link: file
       image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content

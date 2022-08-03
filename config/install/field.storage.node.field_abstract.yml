@@ -7,8 +7,7 @@ id: node.field_abstract
 field_name: field_abstract
 entity_type: node
 type: text_long
-settings:
-  case_sensitive: false
+settings: {  }
 module: core
 locked: false
 cardinality: 1

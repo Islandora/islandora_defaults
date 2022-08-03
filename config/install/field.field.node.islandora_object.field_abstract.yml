@@ -4,6 +4,8 @@ dependencies:
   config:
     - field.storage.node.field_abstract
     - node.type.islandora_object
+  module:
+    - text
 id: node.islandora_object.field_abstract
 field_name: field_abstract
 entity_type: node

@@ -13,7 +13,7 @@ dependencies:
     - rest
     - serialization
     - taxonomy
-    - user 
+    - user
 id: iiif_manifest
 label: 'IIIF Manifest'
 module: views
@@ -665,4 +665,3 @@ display:
       tags:
         - 'config:field.storage.media.field_media_file'
         - 'config:field.storage.media.field_media_image'
-

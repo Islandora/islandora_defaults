@@ -1,12 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - islandora_defaults
   module:
     - islandora
     - node
+  enforced:
+    module:
+      - islandora_defaults
 name: repository_content
 label: Content
 group: Indexing

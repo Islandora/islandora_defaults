@@ -48,36 +48,36 @@ dependencies:
     - field.field.node.islandora_object.field_temporal_subject
     - field.field.node.islandora_object.field_weight
     - node.type.islandora_object
+  module:
+    - user
   enforced:
     module:
       - islandora_defaults
-  module:
-    - user
 id: node.islandora_object.teaser
 targetEntityType: node
 bundle: islandora_object
 mode: teaser
 content:
   display_media_thumbnail:
+    settings: {  }
+    third_party_settings: {  }
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
   field_gemini_uri:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   islandora_fits_checksum:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   links:
-    weight: 1
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   display_media_entity_view_1: true
   display_media_entity_view_2: true
@@ -134,3 +134,4 @@ hidden:
   pdfjs_media_evas_entity_view_1: true
   pdfjs_media_evas_entity_view_2: true
   pdfjs_media_evas_service_file: true
+  search_api_excerpt: true
