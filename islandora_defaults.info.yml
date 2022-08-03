@@ -37,4 +37,5 @@ dependencies:
   - text
   - user
   - views
+  - view_mode_switch
 package: Islandora
