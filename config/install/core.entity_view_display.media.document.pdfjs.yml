@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.pdfjs
+    - field.field.media.document.field_display_hint
     - field.field.media.document.field_file_size
     - field.field.media.document.field_media_document
     - field.field.media.document.field_media_of
@@ -19,8 +20,6 @@ mode: pdfjs
 content:
   field_media_document:
     type: pdf_default
-    weight: 0
-    region: content
     label: visually_hidden
     settings:
       keep_pdfjs: '1'
@@ -31,8 +30,11 @@ content:
       custom_zoom: ''
       pagemode: ''
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   created: true
+  field_display_hint: true
   field_file_size: true
   field_gemini_uri: true
   field_media_of: true

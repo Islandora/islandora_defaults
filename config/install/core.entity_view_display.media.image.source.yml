@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.source
+    - field.field.media.image.field_display_hint
     - field.field.media.image.field_file_size
     - field.field.media.image.field_height
     - field.field.media.image.field_media_image
@@ -12,27 +13,28 @@ dependencies:
     - field.field.media.image.field_original_name
     - field.field.media.image.field_width
     - media.type.image
+  module:
+    - islandora
   enforced:
     module:
       - islandora_core_feature
-  module:
-    - islandora
 id: media.image.source
 targetEntityType: media
 bundle: image
 mode: source
 content:
   field_media_image:
+    type: islandora_image
     label: visually_hidden
     settings:
-      image_style: ''
       image_link: content
+      image_style: ''
     third_party_settings: {  }
-    type: islandora_image
     weight: 0
     region: content
 hidden:
   created: true
+  field_display_hint: true
   field_file_size: true
   field_gemini_uri: true
   field_height: true

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.open_seadragon
+    - field.storage.media.field_display_hint
+    - media.type.image
+  module:
+    - view_mode_switch
+id: media.image.field_display_hint
+field_name: field_display_hint
+entity_type: media
+bundle: image
+label: 'Display Hint'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_view_modes:
+    open_seadragon: open_seadragon
+field_type: view_mode_switch

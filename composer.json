@@ -16,7 +16,8 @@
     "islandora/controlled_access_terms" : "^2",
     "drupal/field_group" : "^3.0",
     "drupal/field_permissions" : "^1.0",
-    "drupal/pdf": "^1.1"
+    "drupal/pdf": "^1.1",
+    "drupal/view_mode_switch": "^2"
   },
   "conflict": {
     "drupal/core": "<=8"
