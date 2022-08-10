@@ -1,26 +1,27 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - islandora_defaults
   module:
     - islandora
     - node
-name: repository_content
+  enforced:
+    module:
+      - islandora_defaults
 label: Content
+name: repository_content
 group: Indexing
 description: 'All repository content'
 requireAllConditions: false
 disabled: false
 conditions:
-  node_type:
-    id: node_type
-    bundles:
-      islandora_object: islandora_object
-    negate: 0
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: a3cfee79-6ab9-4e83-8c19-995dcbca2a44
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      islandora_object: islandora_object
 reactions:
   index:
     id: index
