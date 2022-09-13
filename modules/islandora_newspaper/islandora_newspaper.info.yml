@@ -1,0 +1,17 @@
+name: 'Islandora Newspaper'
+type: module
+description: 'Default configuration for Islandora newspaper view'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Islandora
+dependencies:
+  - block
+  - node
+  - user
+  - views
+  - controlled_access_terms
+  - controlled_access_terms_defaults
+  - islandora_core_feature
+  - islandora_defaults
+  - views_nested_details 
+core_incompatible: false
