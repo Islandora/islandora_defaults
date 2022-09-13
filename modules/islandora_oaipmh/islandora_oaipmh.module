@@ -10,6 +10,7 @@
  */
 function islandora_oaipmh_preprocess_rest_oai_pmh_record(&$variables) {
   $entity = $variables['entity'];
+
   if ($entity->hasField('field_linked_agent')) {
     foreach ($entity->get('field_linked_agent') as $linked_agent) {
       $creator_rels = [
