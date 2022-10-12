@@ -58,7 +58,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: islandora/islandora_ci
-          ref: github-actions-test-breakout-mirador
+          ref: github-actions
           path: islandora_ci
 
       - name: Setup PHP
