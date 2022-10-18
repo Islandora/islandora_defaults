@@ -5,17 +5,18 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "keywords": ["Drupal", "Islandora"],
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://github.com/Islandora/islandora_defaults",
   "support": {
     "issues": "https://github.com/Islandora/documentation/issues"
   },
   "require": {
     "islandora/islandora": "^2",
-    "islandora/openseadragon" : "^2",
-    "islandora/controlled_access_terms" : "^2",
-    "drupal/field_group" : "^3.0",
-    "drupal/field_permissions" : "^1.0",
+    "islandora/openseadragon": "^2",
+    "islandora/controlled_access_terms": "^2",
+    "islandora/islandora_mirador": "^2",
+    "drupal/field_group": "^3.0",
+    "drupal/field_permissions": "^1.0",
     "drupal/pdf": "^1.1"
   },
   "conflict": {
