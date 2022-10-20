@@ -15,7 +15,7 @@ function islandora_defaults_post_update_remove_enforced_dependency() {
   // module (the CSV from which it takes its data), it would leave it in an
   // inconsistent state if we were to leave the entity intact.
   $targets = [
-  	'context.context.binary',
+    'context.context.binary',
     'context.context.collection',
     'context.context.repository_content',
     'context.context.taxonomy_terms',
