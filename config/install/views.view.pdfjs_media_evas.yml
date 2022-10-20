@@ -3,9 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.pdfjs
-  enforced:
-    module:
-      - islandora_defaults
   module:
     - eva
     - media

@@ -4,9 +4,6 @@ dependencies:
   module:
     - islandora
     - node
-  enforced:
-    module:
-      - islandora_defaults
 label: Content
 name: repository_content
 group: Indexing
