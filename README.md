@@ -19,6 +19,14 @@ cd /var/www/html/drupal
 # Update islandora/islandora_defaults such that it has the post-update hooks
 # available. Presently anticipating a "3.0.1" release to which it should update.
 composer require "islandora/islandora_defaults:^3"
+# A caveat exists in that, if `islandora/islandora_defaults` is required by any
+# other Composer package, then those packages may have to be updated first; for
+# example, it is known that there exist Drupal installation profiles that
+# specify a dependency on `islandora/islandora_defaults` (such as https://github.com/Islandora-Devops/islandora_install_profile_demo/blob/181a53bb230d7ced6e70e7746f0da567216ebbf7/composer.json#L157),
+# which would likely have to receive a treatment to strip out any references
+# from their configurations which explicitly bind to `islandora_defaults`
+# similar to our update hook, and to include updated requirements accordingly
+# in the root Composer project.
 
 # Clear cache (paranoia; to ensure the update hooks are appropriately
 # discovered).
