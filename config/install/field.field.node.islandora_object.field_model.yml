@@ -5,9 +5,6 @@ dependencies:
     - field.storage.node.field_model
     - node.type.islandora_object
     - taxonomy.vocabulary.islandora_models
-  enforced:
-    module:
-      - islandora_defaults
 id: node.islandora_object.field_model
 field_name: field_model
 entity_type: node
