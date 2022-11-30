@@ -16,9 +16,9 @@ To ease the removal of this module from existing installations, we have implemen
 # Navigate to the root of your Composer project; for example:
 cd /var/www/html/drupal
 
-# Update islandora/islandora_defaults such that it has the post-update hooks
-# available. Presently anticipating a "3.0.1" release to which it should update.
-composer require "islandora/islandora_defaults:^3"
+# Update islandora/islandora_defaults to "3.0.1" so that it has the post-update hooks
+# available. 
+composer require "islandora/islandora_defaults:^3.0.1"
 # A caveat exists in that, if `islandora/islandora_defaults` is required by any
 # other Composer package, then those packages may have to be updated first; for
 # example, it is known that there exist Drupal installation profiles that
@@ -75,7 +75,7 @@ some very minor preparation to work around the fact that the update hook code
 did not yet exist in released code (and so had to point at the development
 branch (`dev-fix/config-enforcement`) and made use of aliases accordingly (
 `[...] as 3.x-dev`)). When running post-release, the version spec `^3` should be
-able to be used instead.
+ used instead.
 
 ```
 vagrant@islandora8:~$ cd /var/www/html/drupal
